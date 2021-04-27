@@ -89,26 +89,28 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h1><a class="anchor" id="autotoc_md0"></a>
 Opis projektu</h1>
 <p>Celem projektu jest stworzenie aplikacji ostrzegającej o przeszkodach w otoczeniu robota mobilnego w oparciu o biblioteki Qt języka C++, czujniki ultradźwiękowe HC-SR04 oraz mikrokontroler Arduino Nano. Wizualizacja ma przypominać wizualizację danych z czujników samochodu, wyświetlaną na wewnętrznym, wbudowanym ekranie.</p>
-<div style="text-align:center"><img src="przyklad_toyota.jpg" alt="przyklad_zastosowania_czujnikow_w_praktyce" width="30%" class="inline"/><br  />
- Przykład zastosowania czujników w praktyce </div><p>Projekt jest realizowany oczywiście w mniejszej skali, a więc na platformie czujników. <br  />
+<p>Przykład zastosowania podobnych czujników w praktyce widać na zdjęciu poniżej.</p>
+<p><img src="przyklad_toyota.jpg" alt="" class="inline" title="Przykład zastosowania podobnych czujników w praktyce"/></p>
+<p>Projekt jest realizowany oczywiście w mniejszej skali, a więc na platformie czujników. <br  />
 </p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Projekt interfejsu</h1>
 <p>Parkując samochód kierowca trzyma obie ręce na kierownicy i rozgląda się przez okna samochodu badając otoczenie. Informacje wyświetlane na ekranie mają służyć pomocą, muszą więc być automatyczne.</p>
 <p>Interfejs składa się z trzech okien, nazywanych widokami. Jest w pełni automatyczny, co oznacza, że odpowiednie widoki są włączane w zależności od czujników, które wykryją przeszkodę. Czujniki są podzielone na przednie i tylne.</p>
-<div style="text-align:center"><img src="przyklad4.png" alt="widok_czujnikow_przednich" width="15%" class="inline"/> <img src="przyklad5.png" alt="widok_czujnikow_tylnych" width="15%" class="inline"/> <img src="przyklad6.png" alt="widok_calosciowy" width="15%" class="inline"/><br  />
- Przykłady możliwych widoków </div><p>Istnieje jeszcze okno konfiguracji połączenia transmisji UART, włączane automatycznie i jednorazowo przy starcie aplikacji.</p>
+<p>Poniżej znajdują się przykładowe wizualizacje.</p>
+<p><img src="przyklad4.png" alt="" class="inline" title="Widok czujników przednich"/> <img src="przyklad5.png" alt="" class="inline" title="Widok czujników tylnych"/> <img src="przyklad6.png" alt="" class="inline" title="Widok całościowy"/></p>
+<p>Istnieje jeszcze okno konfiguracji połączenia transmisji UART, włączane automatycznie i jednorazowo przy starcie aplikacji.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Protokół komunikacyjny OSOS</h1>
 <p><b>OSOS</b> &ndash; One Sensor One Status.</p>
 <p>Platforma czujników komunikuje się z aplikacją za pomocą UART. Gdy dane pochodzące z czujnika wskazują na zmianę statusu, mikrokontroler wysyła odpowiedni komunikat. Dane wysyłane są w postaci ramki.</p>
-<div style="text-align:center"><img src="dataframe.png" alt="ramka_danych" width="35%" class="inline"/><br  />
- Ramka protokołu komunikacji OSOS </div><p>Komunikacja jest znakowa. Ramka rozpoczyna się od znaku X. Następnie, po spacji, znajduje się numer sensora, którego komunikat dotyczy (Sn). Po kolejnej spacji następuje numer statusu (St). Na koniec, również po spacji, znajduje się suma kontrolna CRC8 w zapisie heksadecymalnym, zajmująca dwa znaki w ramce.</p>
+<p><img src="dataframe.png" alt="" class="inline" title="Ramka transmisji OSOS"/></p>
+<p>Komunikacja jest znakowa. Ramka rozpoczyna się od znaku X. Następnie, po spacji, znajduje się numer sensora, którego komunikat dotyczy (Sn). Po kolejnej spacji następuje numer statusu (St). Na koniec, również po spacji, znajduje się suma kontrolna CRC8 w zapisie heksadecymalnym, zajmująca dwa znaki w ramce.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Schemat ideowy układu czujników</h1>
 <p>Utworzony schemat jest jedynie wersją wstępną. Zostanie dopracowany w dalszych etapach projektu.</p>
-<div style="text-align:center"><img src="schemat.png" alt="schemat_ideowy" width="80%" class="inline"/><br  />
- Wstępna wersja schematu ideowego </div> </div></div><!-- PageDoc -->
+<p><img src="schemat.png" alt="" class="inline" title="Wstępna wersja schematu ideowego"/> </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

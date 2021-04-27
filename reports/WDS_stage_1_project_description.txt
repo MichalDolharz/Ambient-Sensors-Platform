@@ -1,0 +1,7 @@
+Wizualizacja danych sensorycznych - projekt
+Michał Dołharz
+Temat: Wizualizacja wykrytych przeszkód w otoczeniu pojazdu mobilnego.
+
+Projekt zakłada wizualizację danych pochodzących z czujników odległościowych. W domyśle miałyby to być czujniki samochodowe, a wizualizacja odbywałaby się na wewnętrznym, wbudowanym ekranie samochodu (na przykład w celu wspomagania parkowania), jednak w ramach projektu zostanie wykonana platforma czujników w mniejszej skali, która zostanie zintegrowana z robotem mobilnym wykonanym w ramach projektu z kursu Roboty mobilne (zgodnie z założeniami robot mobilny powinien wykrywać przeszkody i je omijać oraz mieć możliwość zdalnego sterowania). Wizualizacja nie będzie dokładnie odwzorowywać otoczenia, a raczej sygnalizować obecność przeszkody i jej odległość prostymi i intuicyjnymi grafikami.
+
+

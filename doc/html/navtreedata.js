@@ -26,7 +26,7 @@ var NAVTREE =
 [
   [ "Platforma czujników – WDS", "index.html", [
     [ "Opis projektu", "index.html#autotoc_md0", null ],
-    [ "Dokumentacja", "index.html#autotoc_md1", null ],
+    [ "Dokumentacja i archiwizacja", "index.html#autotoc_md1", null ],
     [ "Projekt interfejsu", "index.html#autotoc_md2", null ],
     [ "Protokół komunikacyjny OSOS", "index.html#autotoc_md3", null ],
     [ "Schemat ideowy układu czujników", "index.html#autotoc_md4", null ],

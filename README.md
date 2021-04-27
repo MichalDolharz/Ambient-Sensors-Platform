@@ -10,9 +10,9 @@ Przykład zastosowania podobnych czujników w praktyce widać na zdjęciu poniż
 
 Projekt jest realizowany oczywiście w mniejszej skali, a więc na platformie czujników.  
 
-# Dokumentacja
+# Dokumentacja i archiwizacja
 
-Dokumentacja projektu jest tworzona przy pomocy generatora Doxygen i graficznego interfejsu Doxywizard. Wygenerowana dokumentacja w postaci HTML znajduje się w folderze [doc/](doc/).
+Dokumentacja projektu jest tworzona przy pomocy generatora dokumentacji Doxygen i graficznego interfejsu Doxywizard na podstawie plików projektu. Wygenerowana dokumentacja w postaci HTML znajduje się w [repozytorium](https://github.com/Repti993/Ambient-Sensors-Platform/tree/main/doc/html), w którym również znajduje się całe kody źrodłowe aplikacji oraz oprogramowania platformy. Aktualna wersja dokumentacji w formie online powinna również znajdować się na [stronie domowej ~mdolharz na serwerze panamint](http://panamint.ict.pwr.wroc.pl/~mdolharz/wds/).
 
 # Projekt interfejsu
 

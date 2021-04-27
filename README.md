@@ -10,6 +10,10 @@ Przykład zastosowania podobnych czujników w praktyce widać na zdjęciu poniż
 
 Projekt jest realizowany oczywiście w mniejszej skali, a więc na platformie czujników.  
 
+# Dokumentacja
+
+Dokumentacja projektu jest tworzona przy pomocy generatora Doxygen i graficznego interfejsu Doxywizard. Wygenerowana dokumentacja w postaci HTML znajduje się w folderze [doc/](doc/).
+
 # Projekt interfejsu
 
 Parkując samochód kierowca trzyma obie ręce na kierownicy i rozgląda się przez okna samochodu badając otoczenie. Informacje wyświetlane na ekranie mają służyć pomocą, muszą więc być automatyczne. 
@@ -26,7 +30,7 @@ Istnieje jeszcze okno konfiguracji połączenia transmisji UART, włączane auto
 
 # Protokół komunikacyjny OSOS
 
-**OSOS** -- One Sensor One Status.
+**OSOS** – One Sensor One Status.
 
 Platforma czujników komunikuje się z aplikacją za pomocą UART. Gdy dane pochodzące z czujnika wskazują na zmianę statusu, mikrokontroler wysyła odpowiedni komunikat. Dane wysyłane są w postaci ramki.
 

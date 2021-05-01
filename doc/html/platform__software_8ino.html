@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Platforma czujników – WDS: Dokumentacja pliku platform_software/platform_software.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Platforma czujników – WDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('platform__software_8ino.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#typedef-members">Definicje typów</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku platform_software.ino</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;HCSR04.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:ae7295ab9ac7d1cd2196d4e4a62c84e77"><td class="memItemLeft" align="right" valign="top"><a id="ae7295ab9ac7d1cd2196d4e4a62c84e77"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#ae7295ab9ac7d1cd2196d4e4a62c84e77">POLYNOMIAL_9</a>&#160;&#160;&#160;0x161</td></tr>
+<tr class="memdesc:ae7295ab9ac7d1cd2196d4e4a62c84e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polynomial for CRC8. <br /></td></tr>
+<tr class="separator:ae7295ab9ac7d1cd2196d4e4a62c84e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1493fbf1e7b3b05544c1091d9748ba79"><td class="memItemLeft" align="right" valign="top"><a id="a1493fbf1e7b3b05544c1091d9748ba79"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a1493fbf1e7b3b05544c1091d9748ba79">RANGE_ZONE_1</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memdesc:a1493fbf1e7b3b05544c1091d9748ba79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max range of zone 1 (in centimeters). <br /></td></tr>
+<tr class="separator:a1493fbf1e7b3b05544c1091d9748ba79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbdceb6c8db33971cacb59585ff42e15"><td class="memItemLeft" align="right" valign="top"><a id="adbdceb6c8db33971cacb59585ff42e15"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#adbdceb6c8db33971cacb59585ff42e15">RANGE_ZONE_2</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:adbdceb6c8db33971cacb59585ff42e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max range of zone 2 (in centimeters). <br /></td></tr>
+<tr class="separator:adbdceb6c8db33971cacb59585ff42e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908b39fc00361ab5de2ca5ed84eb4742"><td class="memItemLeft" align="right" valign="top"><a id="a908b39fc00361ab5de2ca5ed84eb4742"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a908b39fc00361ab5de2ca5ed84eb4742">RANGE_ZONE_3</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a908b39fc00361ab5de2ca5ed84eb4742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max range of zone 3 (in centimeters). <br /></td></tr>
+<tr class="separator:a908b39fc00361ab5de2ca5ed84eb4742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f4d1347c2a057561460b1fc2fc4124"><td class="memItemLeft" align="right" valign="top"><a id="aa0f4d1347c2a057561460b1fc2fc4124"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#aa0f4d1347c2a057561460b1fc2fc4124">RANGE_ZONE_4</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:aa0f4d1347c2a057561460b1fc2fc4124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max range of zone 4 (in centimeters). <br /></td></tr>
+<tr class="separator:aa0f4d1347c2a057561460b1fc2fc4124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d038bc0d376b5a6a7634604b6e058d"><td class="memItemLeft" align="right" valign="top"><a id="a11d038bc0d376b5a6a7634604b6e058d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a11d038bc0d376b5a6a7634604b6e058d">SENSORS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a11d038bc0d376b5a6a7634604b6e058d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of used sensors. <br /></td></tr>
+<tr class="separator:a11d038bc0d376b5a6a7634604b6e058d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab795b188471453ebe6cdb5fb15ab41"><td class="memItemLeft" align="right" valign="top"><a id="a3ab795b188471453ebe6cdb5fb15ab41"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a3ab795b188471453ebe6cdb5fb15ab41">CHECK_COUNT</a>&#160;&#160;&#160;100</td></tr>
+<tr class="memdesc:a3ab795b188471453ebe6cdb5fb15ab41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter of measurements used to establish status when new status might occur. <br /></td></tr>
+<tr class="separator:a3ab795b188471453ebe6cdb5fb15ab41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8a9131cb6342ce7c6953db1b51b110"><td class="memItemLeft" align="right" valign="top"><a id="aef8a9131cb6342ce7c6953db1b51b110"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#aef8a9131cb6342ce7c6953db1b51b110">STATUS_DELAY_TIME</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:aef8a9131cb6342ce7c6953db1b51b110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay to slow down sensors. <br /></td></tr>
+<tr class="separator:aef8a9131cb6342ce7c6953db1b51b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Definicje typów</h2></td></tr>
+<tr class="memitem:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memItemLeft" align="right" valign="top"><a id="a0c8186d9b9b7880309c27230bbb5e69d"></a>
+typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td></tr>
+<tr class="memdesc:a0c8186d9b9b7880309c27230bbb5e69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Byte structure. <br /></td></tr>
+<tr class="separator:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a058ccf5a32533897a1b725a46a2f45a0"><td class="memItemLeft" align="right" valign="top"><a id="a058ccf5a32533897a1b725a46a2f45a0"></a>
+HCSR04&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a058ccf5a32533897a1b725a46a2f45a0">hc</a> (5, 2)</td></tr>
+<tr class="memdesc:a058ccf5a32533897a1b725a46a2f45a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object of HCSR04 class, representing sensors. Parameters: (trig pin , echo pin). <br /></td></tr>
+<tr class="separator:a058ccf5a32533897a1b725a46a2f45a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top"><a id="a4fc01d736fe50cf5b977f755b675f11d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initializing peripherals, pin modes, etc. Function runs only once, after each powerup or reset of the board. <br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top"><a id="afe461d27b9c48d5921c00d521181f12f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function (loop). <br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0aeb3a10f1029523a91d2f88e43e56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#ace0aeb3a10f1029523a91d2f88e43e56">getStatus</a> (float <a class="el" href="platform__software_8ino.html#a62d19f1b68cc51e55723b31a29cdef78">dist</a>)</td></tr>
+<tr class="memdesc:ace0aeb3a10f1029523a91d2f88e43e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns status number based on measured distans.  <a href="platform__software_8ino.html#ace0aeb3a10f1029523a91d2f88e43e56">Więcej...</a><br /></td></tr>
+<tr class="separator:ace0aeb3a10f1029523a91d2f88e43e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca736523e92c4932d90c174709976989"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#aca736523e92c4932d90c174709976989">checkChange</a> (HCSR04 &amp;<a class="el" href="platform__software_8ino.html#a058ccf5a32533897a1b725a46a2f45a0">hc</a>, int <a class="el" href="platform__software_8ino.html#ac2bcecb1f467d9403d98f2ec23c164a4">current_status</a>, int <a class="el" href="platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea">new_status</a>)</td></tr>
+<tr class="memdesc:aca736523e92c4932d90c174709976989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if new status to be set is not a disruption, although the result is not 100% trustworthy.  <a href="platform__software_8ino.html#aca736523e92c4932d90c174709976989">Więcej...</a><br /></td></tr>
+<tr class="separator:aca736523e92c4932d90c174709976989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e8b64acfe48fb6e8bd6d80b98a5e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a79e8b64acfe48fb6e8bd6d80b98a5e25">byteToStr</a> (uint8_t decimal, char *buff)</td></tr>
+<tr class="memdesc:a79e8b64acfe48fb6e8bd6d80b98a5e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts decimal number (byte) to hexadecimal number (string of two hexadecimal characters)  <a href="platform__software_8ino.html#a79e8b64acfe48fb6e8bd6d80b98a5e25">Więcej...</a><br /></td></tr>
+<tr class="separator:a79e8b64acfe48fb6e8bd6d80b98a5e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d9b65f7c65d3d33ae9d53049fef6fa"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa">nibbleToHex</a> (uint8_t nibble)</td></tr>
+<tr class="memdesc:a81d9b65f7c65d3d33ae9d53049fef6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts four bits nibble into hexadecimal value.  <a href="platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa">Więcej...</a><br /></td></tr>
+<tr class="separator:a81d9b65f7c65d3d33ae9d53049fef6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6cdad88337909c7008f4c45fa391f8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a3b6cdad88337909c7008f4c45fa391f8">CRC8_SingleByte</a> (unsigned int Data2)</td></tr>
+<tr class="memdesc:a3b6cdad88337909c7008f4c45fa391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje operacje bitowe XOR.  <a href="platform__software_8ino.html#a3b6cdad88337909c7008f4c45fa391f8">Więcej...</a><br /></td></tr>
+<tr class="separator:a3b6cdad88337909c7008f4c45fa391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb82eecef5aac384be3bf818f89574ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#adb82eecef5aac384be3bf818f89574ff">CRC8_DataArray</a> (const <a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *pDataFrame, <a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> Len)</td></tr>
+<tr class="memdesc:adb82eecef5aac384be3bf818f89574ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca sumę kontrolą CRC8 dla zadanych danych.  <a href="platform__software_8ino.html#adb82eecef5aac384be3bf818f89574ff">Więcej...</a><br /></td></tr>
+<tr class="separator:adb82eecef5aac384be3bf818f89574ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4addbd422403aa2d3fdcf64769e447"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a1c4addbd422403aa2d3fdcf64769e447">CreateDataFrame</a> (int sensor, int status)</td></tr>
+<tr class="memdesc:a1c4addbd422403aa2d3fdcf64769e447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy ramkę danych (wraz z wyliczeniem sumy kontrolnej).  <a href="platform__software_8ino.html#a1c4addbd422403aa2d3fdcf64769e447">Więcej...</a><br /></td></tr>
+<tr class="separator:a1c4addbd422403aa2d3fdcf64769e447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a63cbb8ce6fb02da57a3ff097e1ee88ea"><td class="memItemLeft" align="right" valign="top"><a id="a63cbb8ce6fb02da57a3ff097e1ee88ea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea">new_status</a></td></tr>
+<tr class="memdesc:a63cbb8ce6fb02da57a3ff097e1ee88ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable with new status to be verified and set in case of positive verification.. <br /></td></tr>
+<tr class="separator:a63cbb8ce6fb02da57a3ff097e1ee88ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bcecb1f467d9403d98f2ec23c164a4"><td class="memItemLeft" align="right" valign="top"><a id="ac2bcecb1f467d9403d98f2ec23c164a4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#ac2bcecb1f467d9403d98f2ec23c164a4">current_status</a> = STATUS_CURRENT</td></tr>
+<tr class="memdesc:ac2bcecb1f467d9403d98f2ec23c164a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">//!&lt; Variable that holds the current status. <br /></td></tr>
+<tr class="separator:ac2bcecb1f467d9403d98f2ec23c164a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d19f1b68cc51e55723b31a29cdef78"><td class="memItemLeft" align="right" valign="top"><a id="a62d19f1b68cc51e55723b31a29cdef78"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a62d19f1b68cc51e55723b31a29cdef78">dist</a></td></tr>
+<tr class="memdesc:a62d19f1b68cc51e55723b31a29cdef78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable that holds measured distance. <br /></td></tr>
+<tr class="separator:a62d19f1b68cc51e55723b31a29cdef78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d2f5216cddb59c7cc8fb2806a7e727"><td class="memItemLeft" align="right" valign="top"><a id="a32d2f5216cddb59c7cc8fb2806a7e727"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727">msg</a></td></tr>
+<tr class="memdesc:a32d2f5216cddb59c7cc8fb2806a7e727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable that holds the data frame to be send to the application. <br /></td></tr>
+<tr class="separator:a32d2f5216cddb59c7cc8fb2806a7e727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a79e8b64acfe48fb6e8bd6d80b98a5e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e8b64acfe48fb6e8bd6d80b98a5e25">&#9670;&nbsp;</a></span>byteToStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void byteToStr </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>decimal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts decimal number (byte) to hexadecimal number (string of two hexadecimal characters) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">decimal</td><td>Decimal value to be converted to hexadecimal value. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buff</td><td>String to be written hexadecimal value into. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa" title="Converts four bits nibble into hexadecimal value.">nibbleToHex()</a> </dd></dl>
+
+</div>
+</div>
+<a id="aca736523e92c4932d90c174709976989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca736523e92c4932d90c174709976989">&#9670;&nbsp;</a></span>checkChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkChange </td>
+          <td>(</td>
+          <td class="paramtype">HCSR04 &amp;&#160;</td>
+          <td class="paramname"><em>hc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>current_status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if new status to be set is not a disruption, although the result is not 100% trustworthy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hc</td><td>Sensor to checked. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current_status</td><td>Current status. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_status</td><td>Status to be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Returns new/old status after the verification. </dd></dl>
+
+</div>
+</div>
+<a id="adb82eecef5aac384be3bf818f89574ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb82eecef5aac384be3bf818f89574ff">&#9670;&nbsp;</a></span>CRC8_DataArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> CRC8_DataArray </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *&#160;</td>
+          <td class="paramname"><em>pDataFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
+          <td class="paramname"><em>Len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca sumę kontrolą CRC8 dla zadanych danych. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDataFrame</td><td>Wartość, dla której wyliczana jest suma kontrolna. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Len</td><td>Liczba początkowych znaków ramki danych, dla któRych obliczana jest suma kontrolna. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="_o_s_o_s___c_r_c8_8h.html#a3b6cdad88337909c7008f4c45fa391f8" title="Wykonuje operacje bitowe XOR.">CRC8_SingleByte()</a> </dd>
+<dd>
+<a class="el" href="_o_s_o_s___c_r_c8_8h.html#a0bf0c8059e32c6afdc848c2b1e4cabec" title="Wykonuje parsowanie ramki danych odczytanych poprzez komunikację UART z platformą czujników.">ParseDataFrame()</a> </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca sumę kontrolą CRC8. </dd></dl>
+
+</div>
+</div>
+<a id="a3b6cdad88337909c7008f4c45fa391f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6cdad88337909c7008f4c45fa391f8">&#9670;&nbsp;</a></span>CRC8_SingleByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int CRC8_SingleByte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Data2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje operacje bitowe XOR. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Data2</td><td>Wartość, na której jest przeprowadzana operacja XOR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="_o_s_o_s___c_r_c8_8h.html#adb82eecef5aac384be3bf818f89574ff" title="Zwraca sumę kontrolą CRC8 dla zadanych danych.">CRC8_DataArray()</a> </dd>
+<dd>
+<a class="el" href="_o_s_o_s___c_r_c8_8h.html#a0bf0c8059e32c6afdc848c2b1e4cabec" title="Wykonuje parsowanie ramki danych odczytanych poprzez komunikację UART z platformą czujników.">ParseDataFrame()</a> </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca częściową sumę kontrolną. </dd></dl>
+
+</div>
+</div>
+<a id="a1c4addbd422403aa2d3fdcf64769e447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4addbd422403aa2d3fdcf64769e447">&#9670;&nbsp;</a></span>CreateDataFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* CreateDataFrame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sensor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy ramkę danych (wraz z wyliczeniem sumy kontrolnej). </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>Numer sensora do zawarcia w ramce </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Numer statusu do zawarcia w ramce </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="_o_s_o_s___c_r_c8_8h.html#adb82eecef5aac384be3bf818f89574ff" title="Zwraca sumę kontrolą CRC8 dla zadanych danych.">CRC8_DataArray()</a> </dd>
+<dd>
+<a class="el" href="_o_s_o_s___c_r_c8_8h.html#a3b6cdad88337909c7008f4c45fa391f8" title="Wykonuje operacje bitowe XOR.">CRC8_SingleByte()</a> </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca <code>string</code> z utworzoną ramką danych. </dd></dl>
+
+</div>
+</div>
+<a id="ace0aeb3a10f1029523a91d2f88e43e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0aeb3a10f1029523a91d2f88e43e56">&#9670;&nbsp;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getStatus </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dist</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns status number based on measured distans. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dist</td><td>Measured distans. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Returns status number based on measured distans. </dd></dl>
+
+</div>
+</div>
+<a id="a81d9b65f7c65d3d33ae9d53049fef6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d9b65f7c65d3d33ae9d53049fef6fa">&#9670;&nbsp;</a></span>nibbleToHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char nibbleToHex </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>nibble</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts four bits nibble into hexadecimal value. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nibble</td><td>Least significant four bits to be converted into hexadecimal value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="platform__software_8ino.html#a79e8b64acfe48fb6e8bd6d80b98a5e25" title="Converts decimal number (byte) to hexadecimal number (string of two hexadecimal characters)">byteToStr()</a> </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Returns <code>string</code> with hexadecimal value. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_945dd4cd2fdd926dfe0a62a45e1cb699.html">platform_software</a></li><li class="navelem"><a class="el" href="platform__software_8ino.html">platform_software.ino</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

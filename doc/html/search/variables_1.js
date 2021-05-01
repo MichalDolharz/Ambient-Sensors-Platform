@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ui_41',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]]
+  ['device_68',['device',['../class_main_window.html#a644ee4e747773d6ea59cdf4bee4deb49',1,'MainWindow']]],
+  ['dist_69',['dist',['../platform__software_8ino.html#a62d19f1b68cc51e55723b31a29cdef78',1,'platform_software.ino']]]
 ];

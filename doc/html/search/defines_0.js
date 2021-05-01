@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['polynomial_5f9_43',['POLYNOMIAL_9',['../_o_s_o_s___c_r_c8_8h.html#ae7295ab9ac7d1cd2196d4e4a62c84e77',1,'OSOS_CRC8.h']]]
+  ['check_5fcount_74',['CHECK_COUNT',['../platform__software_8ino.html#a3ab795b188471453ebe6cdb5fb15ab41',1,'platform_software.ino']]]
 ];

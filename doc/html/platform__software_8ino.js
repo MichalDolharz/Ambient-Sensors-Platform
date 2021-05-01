@@ -1,0 +1,26 @@
+var platform__software_8ino =
+[
+    [ "CHECK_COUNT", "platform__software_8ino.html#a3ab795b188471453ebe6cdb5fb15ab41", null ],
+    [ "POLYNOMIAL_9", "platform__software_8ino.html#ae7295ab9ac7d1cd2196d4e4a62c84e77", null ],
+    [ "RANGE_ZONE_1", "platform__software_8ino.html#a1493fbf1e7b3b05544c1091d9748ba79", null ],
+    [ "RANGE_ZONE_2", "platform__software_8ino.html#adbdceb6c8db33971cacb59585ff42e15", null ],
+    [ "RANGE_ZONE_3", "platform__software_8ino.html#a908b39fc00361ab5de2ca5ed84eb4742", null ],
+    [ "RANGE_ZONE_4", "platform__software_8ino.html#aa0f4d1347c2a057561460b1fc2fc4124", null ],
+    [ "SENSORS", "platform__software_8ino.html#a11d038bc0d376b5a6a7634604b6e058d", null ],
+    [ "STATUS_DELAY_TIME", "platform__software_8ino.html#aef8a9131cb6342ce7c6953db1b51b110", null ],
+    [ "byte", "platform__software_8ino.html#a0c8186d9b9b7880309c27230bbb5e69d", null ],
+    [ "byteToStr", "platform__software_8ino.html#a79e8b64acfe48fb6e8bd6d80b98a5e25", null ],
+    [ "checkChange", "platform__software_8ino.html#aca736523e92c4932d90c174709976989", null ],
+    [ "CRC8_DataArray", "platform__software_8ino.html#adb82eecef5aac384be3bf818f89574ff", null ],
+    [ "CRC8_SingleByte", "platform__software_8ino.html#a3b6cdad88337909c7008f4c45fa391f8", null ],
+    [ "CreateDataFrame", "platform__software_8ino.html#a1c4addbd422403aa2d3fdcf64769e447", null ],
+    [ "getStatus", "platform__software_8ino.html#ace0aeb3a10f1029523a91d2f88e43e56", null ],
+    [ "hc", "platform__software_8ino.html#a058ccf5a32533897a1b725a46a2f45a0", null ],
+    [ "loop", "platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f", null ],
+    [ "nibbleToHex", "platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa", null ],
+    [ "setup", "platform__software_8ino.html#a4fc01d736fe50cf5b977f755b675f11d", null ],
+    [ "current_status", "platform__software_8ino.html#ac2bcecb1f467d9403d98f2ec23c164a4", null ],
+    [ "dist", "platform__software_8ino.html#a62d19f1b68cc51e55723b31a29cdef78", null ],
+    [ "msg", "platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727", null ],
+    [ "new_status", "platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea", null ]
+];

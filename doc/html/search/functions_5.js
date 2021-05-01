@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readfromport_39',['readFromPort',['../class_main_window.html#a42f11195758f78967e670779c4535708',1,'MainWindow']]]
+  ['loop_57',['loop',['../platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'platform_software.ino']]]
 ];

@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['on_5fpushbuttonclose_5fclicked_12',['on_pushButtonClose_clicked',['../class_main_window.html#ae6349a57bd8b7680cfb2da5a6042c4bd',1,'MainWindow']]],
-  ['on_5fpushbuttonconnect_5fclicked_13',['on_pushButtonConnect_clicked',['../class_main_window.html#a74bf7ec51582db3d2d98265b66afc0cc',1,'MainWindow']]],
-  ['on_5fpushbuttonsearch_5fclicked_14',['on_pushButtonSearch_clicked',['../class_main_window.html#a5dd6fd2201adc933d4fe8d053865710f',1,'MainWindow']]],
-  ['osos_5fcrc8_2ecpp_15',['OSOS_CRC8.cpp',['../_o_s_o_s___c_r_c8_8cpp.html',1,'']]],
-  ['osos_5fcrc8_2eh_16',['OSOS_CRC8.h',['../_o_s_o_s___c_r_c8_8h.html',1,'']]]
+  ['hc_13',['hc',['../platform__software_8ino.html#a058ccf5a32533897a1b725a46a2f45a0',1,'platform_software.ino']]]
 ];

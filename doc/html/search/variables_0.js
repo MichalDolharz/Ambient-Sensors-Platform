@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['device_40',['device',['../class_main_window.html#a644ee4e747773d6ea59cdf4bee4deb49',1,'MainWindow']]]
+  ['current_5fstatus_67',['current_status',['../platform__software_8ino.html#ac2bcecb1f467d9403d98f2ec23c164a4',1,'platform_software.ino']]]
 ];

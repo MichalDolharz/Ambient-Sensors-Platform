@@ -15,7 +15,7 @@
 #define CHECK_COUNT 100 //!< Counter of measurements used to establish status when new status might occur.
 #define STATUS_DELAY_TIME 0 //!< Delay to slow down sensors.
 //#define STATUS_ERROR 100
-//#define STATUS_CURRENT 200
+#define STATUS_CURRENT 200
 
 /*! @brief Byte structure
  */

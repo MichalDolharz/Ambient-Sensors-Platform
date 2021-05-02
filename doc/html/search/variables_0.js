@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['current_5fstatus_67',['current_status',['../platform__software_8ino.html#ac2bcecb1f467d9403d98f2ec23c164a4',1,'platform_software.ino']]]
+  ['current_5fstatus_69',['current_status',['../platform__software_8ino.html#a105c36fd1067ff7ba66a63ab94ece804',1,'platform_software.ino']]]
 ];

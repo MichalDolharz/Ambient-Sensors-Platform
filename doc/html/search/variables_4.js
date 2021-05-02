@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_72',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]]
+  ['sensor_74',['sensor',['../platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4',1,'platform_software.ino']]]
 ];

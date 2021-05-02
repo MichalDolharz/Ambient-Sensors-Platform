@@ -10,22 +10,24 @@
 #define RANGE_ZONE_3 10 //!< Max range of zone 3 (in centimeters).
 #define RANGE_ZONE_4 5  //!< Max range of zone 4 (in centimeters).
 
-#define SENSORS 1 //!< Number of used sensors.
+#define SENSORS 5 //!< Number of used sensors.
 
 #define CHECK_COUNT 100 //!< Counter of measurements used to establish status when new status might occur.
 #define STATUS_DELAY_TIME 0 //!< Delay to slow down sensors.
-//#define STATUS_ERROR 100
-#define STATUS_CURRENT 200
+#define STATUS_START 200 //!< Starting value for each status. Immediately changed in loop() function.
 
 /*! @brief Byte structure
  */
 typedef unsigned char byte;
 
-HCSR04 hc(5, 2); //!< Object of HCSR04 class, representing sensors. Parameters: (trig pin , echo pin).
+HCSR04 hc(2,new int[SENSORS]{3,4,5,6,7},SENSORS); //!< Object of HCSR04 class, representing five sensors. Parameters: (trig pin , echo pins, number of sensors).
+
 int new_status; //!< Variable with new status to be verified and set in case of positive verification..
-int current_status = STATUS_CURRENT; //!< //!< Variable that holds the current status.
+int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START}; //!< //!< Variable that holds the current status.
 int dist;//!< Variable that holds measured distance.
 char *msg; //!< Variable that holds the data frame to be send to the application.
+int sensor = 0; //!< Sensors counter, range 0-4 (five sensors)
+//unsigned long counter = 0; //!< Counter for debugging puposes
 
 /*! @brief Function for initializing peripherals, pin modes, etc. Function runs only once, after each powerup or reset of the board.
  */
@@ -34,32 +36,48 @@ void setup()
     Serial.begin(9600);
 }
 
-/*! @brief Main function (loop).
+/*! @brief Main function (loop). Each cycle refers to one sensor.
  */
 void loop()
 {
-  dist = hc.dist();
-    new_status = getStatus(dist);
-    if(new_status != current_status)
-    {
-      //sprintf (debug, "1: current: %d, new: %d", current_status, new_status);
-      //Serial.print(debug);
-      new_status = checkChange(hc, current_status, new_status);
-      //sprintf (debug, "2: current: %d, new: %d", current_status, new_status);
-      //Serial.println(debug);
-      if(new_status != current_status){
-        current_status = new_status;
-        //sprintf (msg, "New status: %d (%4d)", current_status, dist);
-        //sprintf (msg, "X 1 2 80", current_status, dist);
-        msg = CreateDataFrame(3, current_status);
-        Serial.println(msg);
-        //Serial.print("X 1 2 80\r\n");
-        //Serial.println("X 3 45281 FC");
-      }
-    }
+  new_status = getStatus(hc.dist(sensor));  // takes the measurement and converts it to corresponding status
+  if(new_status != current_status[sensor]) // if 'new' status is indeed different
+  {
 
-    
-    delay(STATUS_DELAY_TIME);
+    // These worked for one sensor not bad, but for more sensor it slows down program too much. 
+    // new_status = checkChange(hc, current_status, new_status);
+    //if(new_status != current_status[sensor]){
+
+      current_status[sensor] = new_status;
+      msg = CreateDataFrame(sensor, current_status[sensor]);
+      Serial.println(msg);
+
+    //}
+  }
+  ////////////////////////////////////////////////////////
+  // For debugging purposes                             //
+  ////////////////////////////////////////////////////////
+  /*if(counter%10 == 0)
+  {
+    Serial.print(counter); // the only purpose of counter is to show if program is still working, ie. 0 0 0 0 0 stays for a while, but the counter changes
+    Serial.print("| ");
+    for(int i = 0; i < SENSORS; i++)
+    {
+      Serial.print(current_status[i]);
+      Serial.print(" ");
+    }
+  Serial.println(" ");
+  }
+  counter++;*/
+  ////////////////////////////////////////////////////////
+  // For debugging purposes - end                       //
+  ////////////////////////////////////////////////////////
+  sensor++; // proceeds to next sensor
+  if(sensor >= SENSORS)
+  {
+    sensor = 0;
+  }
+  delay(6); // might be a good idea to increase to 10
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -82,12 +100,13 @@ int getStatus(float dist)
 }
 
 /*! @brief Verifies if new status to be set is not a disruption, although the result is not 100% trustworthy.
- * @param[in] hc Sensor to checked.
+ * @param[in] hc Array of sensors.
+ * @param[in] sensor Sensor to be checked.
  * @param[in] current_status Current status.
  * @param[in] new_status Status to be checked.
  * @return Returns new/old status after the verification.
  */
-int checkChange(HCSR04 &hc, int current_status, int new_status)
+int checkChange(HCSR04 &hc, int sensor, int current_status, int new_status)
 {
     int current_ = 0, new_ = 0, error_ = 0; // three counters
     int status;                             // measured status
@@ -97,7 +116,7 @@ int checkChange(HCSR04 &hc, int current_status, int new_status)
     // Checks which status occurs more often
     for (int i = 0; i < CHECK_COUNT; i++)
     {
-        status = getStatus(hc.dist()); // checking new status
+        status = getStatus(hc.dist(sensor)); // checking new status
         if (status == current_status)
             current_++;
         else if (status == new_status)

@@ -7,7 +7,7 @@
 */
 
 #include "mainwindow.h"
-#include "sensorview.h"
+#include "sensorsfront.h"
 
 #include <QApplication>
 
@@ -19,11 +19,14 @@
  */
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     MainWindow w;
-    SensorView s;
+    SensorsFront s;
+
+    w.setWindowTitle("Configuration");
+    s.setWindowTitle("Front sensors");
 
     w.show();
     s.show();
-    return a.exec();
+    return app.exec();
 }

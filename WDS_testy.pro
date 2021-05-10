@@ -13,16 +13,16 @@ SOURCES += \
     OSOS_CRC8.cpp \
     main.cpp \
     mainwindow.cpp \
-    sensorview.cpp
+    sensorsfront.cpp
 
 HEADERS += \
     OSOS_CRC8.h \
     mainwindow.h \
-    sensorview.h
+    sensorsfront.h
 
 FORMS += \
     mainwindow.ui \
-    sensorview.ui
+    sensorsfront.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

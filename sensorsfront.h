@@ -1,5 +1,5 @@
-#ifndef SENSORVIEW_H
-#define SENSORVIEW_H
+#ifndef SENSORSFRONT_H
+#define SENSORSFRONT_H
 
 #include <QMainWindow>
 #include <QPainter>
@@ -15,17 +15,34 @@
 #define X_CENTER X_START+X_WIDTH/2
 #define Y_CENTER Y_START+Y_HEIGHT/2
 
+// in px (not mm)
+#define GREEN_BLOCK_TOP 400
+#define GREEN_BLOCK_BOTTOM 365
+#define YELLOW_BLOCK_TOP 355
+#define YELLOW_BLOCK_BOTTOM 320
+#define ORANGE_BLOCK_TOP 310
+#define ORANGE_BLOCK_BOTTOM 275
+#define RED_BLOCK_TOP 265
+#define RED_BLOCK_BOTTOM 230
+
+#define SENSOR_0_ANGLE -131.5
+#define SENSOR_1_ANGLE -114.5
+#define SENSOR_2_ANGLE -97.5
+#define SENSOR_3_ANGLE -80.5
+#define SENSOR_4_ANGLE -63.5
+
+
 namespace Ui {
-class SensorView;
+class SensorsFront;
 }
 
-class SensorView : public QMainWindow
+class SensorsFront : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit SensorView(QWidget *parent = nullptr);
-    ~SensorView();
+    explicit SensorsFront(QWidget *parent = nullptr);
+    ~SensorsFront();
 
     virtual void paintEvent(QPaintEvent *event);
     struct GradColors
@@ -45,10 +62,15 @@ public:
         static QColor DarkRed;
         static QColor Red;
     };
+
+    static double Angles[];
+    static int BlocksRanges[];
+
+
 private:
-    Ui::SensorView *ui;
+    Ui::SensorsFront *ui;
 
 
 };
 
-#endif // SENSORVIEW_H
+#endif // SensorsFront_H

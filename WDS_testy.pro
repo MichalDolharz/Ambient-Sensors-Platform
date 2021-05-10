@@ -12,14 +12,17 @@ CONFIG += c++11
 SOURCES += \
     OSOS_CRC8.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sensorview.cpp
 
 HEADERS += \
     OSOS_CRC8.h \
-    mainwindow.h
+    mainwindow.h \
+    sensorview.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    sensorview.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

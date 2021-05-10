@@ -7,6 +7,7 @@
 */
 
 #include "mainwindow.h"
+#include "sensorview.h"
 
 #include <QApplication>
 
@@ -20,6 +21,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    SensorView s;
+
     w.show();
+    s.show();
     return a.exec();
 }

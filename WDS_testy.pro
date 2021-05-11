@@ -1,5 +1,6 @@
 QT       += core gui
 QT       += serialport
+QT       += widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,18 +12,21 @@ CONFIG += c++11
 
 SOURCES += \
     OSOS_CRC8.cpp \
+    block.cpp \
+    blocks.cpp \
     main.cpp \
     mainwindow.cpp \
-    sensorsfront.cpp
+    zone.cpp
 
 HEADERS += \
     OSOS_CRC8.h \
+    block.h \
+    blocks.h \
     mainwindow.h \
-    sensorsfront.h
+    zone.h
 
 FORMS += \
-    mainwindow.ui \
-    sensorsfront.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

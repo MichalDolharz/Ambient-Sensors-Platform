@@ -14,7 +14,7 @@
 
 #define CHECK_COUNT 100 //!< Counter of measurements used to establish status when new status might occur.
 #define STATUS_DELAY_TIME 0 //!< Delay to slow down sensors.
-#define STATUS_START 200 //!< Starting value for each status. Immediately changed in loop() function.
+#define STATUS_START 0 //!< Starting value for each status. Immediately changed in loop() function.
 
 /*! @brief Byte structure
  */
@@ -27,6 +27,11 @@ int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STAT
 int dist;//!< Variable that holds measured distance.
 char *msg; //!< Variable that holds the data frame to be send to the application.
 int sensor = 0; //!< Sensors counter, range 0-4 (five sensors)
+unsigned long savedTime[] = {0, 0, 0, 0, 0};
+unsigned long thisTime[] = {0, 0, 0, 0, 0};
+unsigned long timeStopToSendDataFrame;
+//String a = "";
+//int b = 0;
 //unsigned long counter = 0; //!< Counter for debugging puposes
 
 /*! @brief Function for initializing peripherals, pin modes, etc. Function runs only once, after each powerup or reset of the board.
@@ -34,26 +39,68 @@ int sensor = 0; //!< Sensors counter, range 0-4 (five sensors)
 void setup()
 {
     Serial.begin(9600);
+    pinMode(15, OUTPUT);
 }
 
 /*! @brief Main function (loop). Each cycle refers to one sensor.
  */
 void loop()
 {
-  new_status = getStatus(hc.dist(sensor));  // takes the measurement and converts it to corresponding status
-  if(new_status != current_status[sensor]) // if 'new' status is indeed different
-  {
+  /////////////
+  // Might be a good idea to stop/slow down flashing blocks in app
+  //thisTime[sensor] = millis();  
+  //if(thisTime[sensor] - savedTime[sensor] >= 200UL)
+  //{
+  //  savedTime[sensor] = thisTime[sensor];
+  // end of idea
+  /////////////
+    new_status = getStatus(hc.dist(sensor));  // takes the measurement and converts it to corresponding status
 
-    // These worked for one sensor not bad, but for more sensor it slows down program too much. 
-    // new_status = checkChange(hc, current_status, new_status);
-    //if(new_status != current_status[sensor]){
+    if(new_status != current_status[sensor]) // if 'new' status is indeed different
+    {
 
-      current_status[sensor] = new_status;
-      msg = CreateDataFrame(sensor, current_status[sensor]);
-      Serial.println(msg);
+      // These worked for one sensor not bad, but for more sensor it slows down program too much. 
+      // new_status = checkChange(hc, current_status, new_status);
+      //if(new_status != current_status[sensor]){
 
-    //}
-  }
+        current_status[sensor] = new_status;
+        msg = CreateDataFrame(sensor, current_status[sensor]);
+        Serial.println(msg);
+        timeStopToSendDataFrame = millis();
+        while(thisTime[sensor] - timeStopToSendDataFrame < 100)
+        {
+          thisTime[sensor] = millis();  
+        }
+
+        //////
+        // Might be a good idea to develop in case of too many failed parsing data frame
+        /*while(Serial.available() == 0)
+        {
+          thisTime[sensor] = millis();  
+          if(thisTime[sensor] - saveTimeForResponse > 250)
+          {
+            b = 1;
+            break;
+          }
+        }
+        if(b == 0 && Serial.available() > 0)
+        {
+          a = Serial.readStringUntil('\n');
+          if(a == "REPEAT")
+          {
+          digitalWrite(15, HIGH);
+          Serial.println(msg);
+          delay(5);
+          digitalWrite(15, LOW);
+          }
+                    
+        }
+        b = 0;*/
+        // end of idea
+        /////////////////////
+      //}
+    }
+  //}
   ////////////////////////////////////////////////////////
   // For debugging purposes                             //
   ////////////////////////////////////////////////////////
@@ -77,7 +124,7 @@ void loop()
   {
     sensor = 0;
   }
-  delay(6); // might be a good idea to increase to 10
+  delay(20); // I think it really was a good idea
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

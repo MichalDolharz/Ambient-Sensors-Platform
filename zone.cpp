@@ -1,144 +1,86 @@
 #include "zone.h"
-#include <QFileDialog>
 
-Zone::Zone(QGraphicsScene* scene, int viewMode)
+Zone::Zone()
 {
-    sceneTMP = scene;
+    this->Grupa = new QGraphicsItemGroup();
+}
 
-    int Xcenters[] = {240, 320, 400, 480, 560};
-    int Ycenters[] = {100, 145, 190, 235};
-    int numberOfBlocks[] = {4, 3, 2, 1};
-    int blockColors[] = {0, 1, 2, 3};
+Zone::Zone(QGraphicsScene* scene, int x, int y, int zoneNumber)
+{
+    int numberOfBlocks;
+    QColor setColor;
 
-    zone = new Blocks*[5];
-    for(int x = 0; x < 5; x++)
-    {
-        zone[x] = new Blocks[5];
-        for(int y = 0; y < 4; y++)
-        {
-            zone[x][y] = Blocks(scene, Xcenters[x], Ycenters[y], numberOfBlocks[y], blockColors[y]);
-            if(y > 0)
-            {
-               zone[x][y].hide();
-            }
-        }
-    }
+    this->Grupa = new QGraphicsItemGroup;
 
-    QGraphicsPixmapItem *img;
-    int width, height;
-    switch(viewMode)
+    switch(zoneNumber)
     {
     case 0:
-        this->view = frontView;
-        img = new QGraphicsPixmapItem(QPixmap("D:/Qt_workspace/WDS_testy/front.png"));
-        width = img->boundingRect().width();
-        height = img->boundingRect().height();
-        img->setPos(400-width/2, 600-height);//moveBy(400-330/2,600-289);
-        scene->addItem(img);
-
-        statuses = new int[5];
-        for(int i = 0; i < 5; i++)
-        {
-            statuses[i] = 0;
-        }
-
+        setColor = Colors::DarkGreen;
+        numberOfBlocks = 4;
         break;
     case 1:
-        this->view = backView;
+        setColor = Colors::DarkYellow;
+        numberOfBlocks = 3;
         break;
     case 2:
-        this->view = bothSidesView;
+        setColor = Colors::DarkOrange;
+        numberOfBlocks = 2;
+        break;
+    case 3:
+        setColor = Colors::DarkRed;
+        numberOfBlocks = 1;
         break;
     default:
-        this->view = frontView;
+        setColor = Qt::white;
         break;
     }
-}
 
-Zone::setStatus(int sensor, int status)
-{
-    zone[sensor][statuses[sensor]];
-
-    zone[sensor][statuses[sensor]].hide();
-
-    this->statuses[sensor] = status;
-
-    zone[sensor][statuses[sensor]].show();
-}
-
-void Zone::keyPressEvent(QKeyEvent *event)
-{
-
-    switch (event->key())
+    QGraphicsRectItem *tmp;
+    for(int i = 0; i < numberOfBlocks; i++)
     {
-    case Qt::Key_1:
-        this->setStatus(0, 0);
-        break;
-    case Qt::Key_2:
-        this->setStatus(0, 1);
-        break;
-    case Qt::Key_3:
-        this->setStatus(0, 2);
-        break;
-    case Qt::Key_4:
-        this->setStatus(0, 3);
-        break;
-    case Qt::Key_Q:
-        this->setStatus(1, 0);
-        break;
-    case Qt::Key_W:
-        this->setStatus(1, 1);
-        break;
-    case Qt::Key_E:
-        this->setStatus(1, 2);
-        break;
-    case Qt::Key_R:
-        this->setStatus(1, 3);
-        break;
-    case Qt::Key_A:
-        this->setStatus(2, 0);
-        break;
-    case Qt::Key_S:
-        this->setStatus(2, 1);
-        break;
-    case Qt::Key_D:
-        this->setStatus(2, 2);
-        break;
-    case Qt::Key_F:
-        this->setStatus(2, 3);
-        break;
-    case Qt::Key_Z:
-        this->setStatus(3, 0);
-        break;
-    case Qt::Key_X:
-        this->setStatus(3, 1);
-        break;
-    case Qt::Key_C:
-        this->setStatus(3, 2);
-        break;
-    case Qt::Key_V:
-        this->setStatus(3, 3);
-        break;
-    case Qt::Key_U:
-        this->setStatus(4, 0);
-        break;
-    case Qt::Key_I:
-        this->setStatus(4, 1);
-        break;
-    case Qt::Key_O:
-        this->setStatus(4, 2);
-        break;
-    case Qt::Key_P:
-        this->setStatus(4, 3);
-        break;
-    default:
-        break;
+        tmp = new Block();
+        tmp->setBrush(setColor);
+        tmp->setPen(Qt::NoPen);
+        tmp->setRect(0,(BLOCK_HEIGHT+BLOCK_HEIGHT_SPACE)*i, BLOCK_WIDTH, BLOCK_HEIGHT);
+        Grupa->addToGroup(tmp);
     }
 
-    sceneTMP->update();
+    Grupa->moveBy(x-BLOCK_WIDTH/2, y);
+
+    scene->addItem(Grupa);
+
 }
 
-void Zone::move(int sensor, int status, int x, int y)
+bool Zone::isHidden()
 {
-    zone[sensor][status].move(x, y);
+    if(Grupa->y() > WINDOW_HEIGHT)
+        return true;
+    else
+        return false;
 }
+
+void Zone::show()
+{
+    Grupa->moveBy(0, -2000);
+}
+void Zone::hide()
+{
+    Grupa->moveBy(0, 2000);
+}
+void Zone::move(int x, int y)
+{
+    Grupa->moveBy(x, y);
+}
+
+QColor Zone::Colors::DarkGreen(176, 203, 31);
+QColor Zone::Colors::Green(Qt::white);
+
+QColor Zone::Colors::DarkYellow(255, 237, 0);
+QColor Zone::Colors::Yellow(Qt::white);
+
+QColor Zone::Colors::DarkOrange(239, 127, 26);
+QColor Zone::Colors::Orange(Qt::white);
+
+QColor Zone::Colors::DarkRed(227, 30, 36);
+QColor Zone::Colors::Red(Qt::white);
+

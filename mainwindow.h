@@ -16,7 +16,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <QDateTime>
-#include "zone.h"
+#include "view.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +25,9 @@ QT_END_NAMESPACE
 /*! \file mainwindow.h
  */
 
+/*!
+ * \brief The MainWindow class
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT //<! Główny obiekt klasy
@@ -33,14 +36,19 @@ public:
     /*! \brief Konstruktor klasy MainWindow
      */
     MainWindow(QWidget *parent = nullptr);
-    MainWindow(Zone &zone, QWidget *parent = nullptr);
+    /*!
+     * \brief MainWindow constructor with View object handle.
+     */
+    MainWindow(View &view, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     /*! \brief Odczytuje dane przychodzące z mikrokontrolera poprzez komunikację UART.
      */
     void readFromPort();
-    void demandRepeat();
+
+    // Currently not used, but might be used in the future
+    //void demandRepeat();
 
     /*! \brief Slot przycisku "Szukaj".
      *  Wyszukuje dostępne porty COM.
@@ -70,6 +78,6 @@ private:
     */
     void addToComm(QString message);
 
-    Zone *front;
+    View *front; //!< Handle to a View object.
 };
 #endif // MAINWINDOW_H

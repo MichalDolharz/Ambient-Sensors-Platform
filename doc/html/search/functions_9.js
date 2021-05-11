@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['parsedataframe_66',['ParseDataFrame',['../_o_s_o_s___c_r_c8_8cpp.html#a0bf0c8059e32c6afdc848c2b1e4cabec',1,'ParseDataFrame(const char *pDataFrame, int &amp;sensor, int &amp;status):&#160;OSOS_CRC8.cpp'],['../_o_s_o_s___c_r_c8_8h.html#a0bf0c8059e32c6afdc848c2b1e4cabec',1,'ParseDataFrame(const char *pDataFrame, int &amp;sensor, int &amp;status):&#160;OSOS_CRC8.cpp']]]
+  ['on_5fpushbuttonclose_5fclicked_109',['on_pushButtonClose_clicked',['../class_main_window.html#ae6349a57bd8b7680cfb2da5a6042c4bd',1,'MainWindow']]],
+  ['on_5fpushbuttonconnect_5fclicked_110',['on_pushButtonConnect_clicked',['../class_main_window.html#a74bf7ec51582db3d2d98265b66afc0cc',1,'MainWindow']]],
+  ['on_5fpushbuttonsearch_5fclicked_111',['on_pushButtonSearch_clicked',['../class_main_window.html#a5dd6fd2201adc933d4fe8d053865710f',1,'MainWindow']]]
 ];

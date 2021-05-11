@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sensor_74',['sensor',['../platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4',1,'platform_software.ino']]]
+  ['msg_130',['msg',['../platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727',1,'platform_software.ino']]]
 ];

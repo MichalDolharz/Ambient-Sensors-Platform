@@ -127,7 +127,7 @@ Definicje</h2></td></tr>
 <tr class="memdesc:aef8a9131cb6342ce7c6953db1b51b110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay to slow down sensors. <br /></td></tr>
 <tr class="separator:aef8a9131cb6342ce7c6953db1b51b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39d685b920dc71fc749819e15399981b"><td class="memItemLeft" align="right" valign="top"><a id="a39d685b920dc71fc749819e15399981b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a39d685b920dc71fc749819e15399981b">STATUS_START</a>&#160;&#160;&#160;200</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a39d685b920dc71fc749819e15399981b">STATUS_START</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:a39d685b920dc71fc749819e15399981b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting value for each status. Immediately changed in <a class="el" href="platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f" title="Main function (loop). Each cycle refers to one sensor.">loop()</a> function. <br /></td></tr>
 <tr class="separator:a39d685b920dc71fc749819e15399981b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -196,6 +196,14 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pl
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4">sensor</a> = 0</td></tr>
 <tr class="memdesc:a121acd7d54db2c37fcccbf3c1b9c0df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensors counter, range 0-4 (five sensors) <br /></td></tr>
 <tr class="separator:a121acd7d54db2c37fcccbf3c1b9c0df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c881ac5abd2acca33cc07101c11936"><td class="memItemLeft" align="right" valign="top"><a id="aa4c881ac5abd2acca33cc07101c11936"></a>
+unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#aa4c881ac5abd2acca33cc07101c11936">thisTime</a></td></tr>
+<tr class="memdesc:aa4c881ac5abd2acca33cc07101c11936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves current time to be compared with other saved time. <br /></td></tr>
+<tr class="separator:aa4c881ac5abd2acca33cc07101c11936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6aff613b89e1b2276b66216db79ec70"><td class="memItemLeft" align="right" valign="top"><a id="ae6aff613b89e1b2276b66216db79ec70"></a>
+unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__software_8ino.html#ae6aff613b89e1b2276b66216db79ec70">timeStopToSendDataFrame</a></td></tr>
+<tr class="memdesc:ae6aff613b89e1b2276b66216db79ec70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves time so Serial has time to finish. <br /></td></tr>
+<tr class="separator:ae6aff613b89e1b2276b66216db79ec70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji</h2>
 <a id="a79e8b64acfe48fb6e8bd6d80b98a5e25"></a>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msg_72',['msg',['../platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727',1,'platform_software.ino']]]
+  ['front_127',['front',['../class_main_window.html#a3ca96235f7161b512044e24936090b85',1,'MainWindow']]]
 ];

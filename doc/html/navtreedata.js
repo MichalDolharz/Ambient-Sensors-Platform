@@ -47,6 +47,7 @@ var NAVTREE =
         [ "Funkcje", "globals_func.html", null ],
         [ "Zmienne", "globals_vars.html", null ],
         [ "Definicje typów", "globals_type.html", null ],
+        [ "Wyliczenia", "globals_enum.html", null ],
         [ "Definicje", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -55,7 +56,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_o_s_o_s___c_r_c8_8cpp.html"
+"_o_s_o_s___c_r_c8_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

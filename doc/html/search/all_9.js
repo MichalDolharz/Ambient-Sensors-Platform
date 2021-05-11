@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['on_5fpushbuttonclose_5fclicked_23',['on_pushButtonClose_clicked',['../class_main_window.html#ae6349a57bd8b7680cfb2da5a6042c4bd',1,'MainWindow']]],
-  ['on_5fpushbuttonconnect_5fclicked_24',['on_pushButtonConnect_clicked',['../class_main_window.html#a74bf7ec51582db3d2d98265b66afc0cc',1,'MainWindow']]],
-  ['on_5fpushbuttonsearch_5fclicked_25',['on_pushButtonSearch_clicked',['../class_main_window.html#a5dd6fd2201adc933d4fe8d053865710f',1,'MainWindow']]],
-  ['osos_5fcrc8_2ecpp_26',['OSOS_CRC8.cpp',['../_o_s_o_s___c_r_c8_8cpp.html',1,'']]],
-  ['osos_5fcrc8_2eh_27',['OSOS_CRC8.h',['../_o_s_o_s___c_r_c8_8h.html',1,'']]]
+  ['main_32',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_33',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mainwindow_34',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow(QWidget *parent=nullptr)'],['../class_main_window.html#a523b9a9aaa169fe6811ff1a517b37c65',1,'MainWindow::MainWindow(View &amp;view, QWidget *parent=nullptr)']]],
+  ['mainwindow_2eh_35',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
+  ['move_36',['move',['../class_zone.html#afc8f4ff86a8038beee8519166f0f38ab',1,'Zone']]],
+  ['msg_37',['msg',['../platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727',1,'platform_software.ino']]]
 ];

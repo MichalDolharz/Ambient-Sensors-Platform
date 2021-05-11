@@ -1,15 +1,39 @@
+/**
+* @file block.h
+* @brief Header for simple block
+*
+* @author Michał Dołharz
+*
+*/
+
 #ifndef BLOCK_H
 #define BLOCK_H
 
-#include <QRectF>
+//#include <QRectF>
 #include <QPainter>
 //#include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
+#define WINDOW_WIDTH 800  //!< Main (and every) window width.
+#define WINDOW_HEIGHT 600 //!< Main (and every) window height.
+
+/*!
+ * \brief The Block class. Defines single block.
+ */
 class Block : public QGraphicsRectItem
 {
     public:
-        Block(QGraphicsItem *parent = Q_NULLPTR);
+        /*!
+         * \brief Default Block class constructor.
+         */
+        Block();//QGraphicsItem *parent = Q_NULLPTR);
+
+        /*!
+         * \brief Reimplemented from QGraphicsItem. Paints the contents of an item in local coordinates.
+         * \param[in] painter QPainter object.
+         * \param[in] option Optional QStyleOptionGraphicsItem object.
+         * \param[in] widget Optional QWidget object.
+         */
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 

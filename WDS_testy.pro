@@ -13,16 +13,16 @@ CONFIG += c++11
 SOURCES += \
     OSOS_CRC8.cpp \
     block.cpp \
-    blocks.cpp \
     main.cpp \
     mainwindow.cpp \
+    view.cpp \
     zone.cpp
 
 HEADERS += \
     OSOS_CRC8.h \
     block.h \
-    blocks.h \
     mainwindow.h \
+    view.h \
     zone.h
 
 FORMS += \

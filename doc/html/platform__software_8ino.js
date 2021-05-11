@@ -24,5 +24,7 @@ var platform__software_8ino =
     [ "dist", "platform__software_8ino.html#a62d19f1b68cc51e55723b31a29cdef78", null ],
     [ "msg", "platform__software_8ino.html#a32d2f5216cddb59c7cc8fb2806a7e727", null ],
     [ "new_status", "platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea", null ],
-    [ "sensor", "platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4", null ]
+    [ "sensor", "platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4", null ],
+    [ "thisTime", "platform__software_8ino.html#aa4c881ac5abd2acca33cc07101c11936", null ],
+    [ "timeStopToSendDataFrame", "platform__software_8ino.html#ae6aff613b89e1b2276b66216db79ec70", null ]
 ];

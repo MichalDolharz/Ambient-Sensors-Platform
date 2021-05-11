@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['new_5fstatus_21',['new_status',['../platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea',1,'platform_software.ino']]],
-  ['nibbletohex_22',['nibbleToHex',['../platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa',1,'platform_software.ino']]]
+  ['loop_31',['loop',['../platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'platform_software.ino']]]
 ];

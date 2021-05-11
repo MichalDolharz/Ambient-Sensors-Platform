@@ -1,13 +1,3 @@
-/**
-* @file OSOS_CRC8.cpp
-* @brief Obsługa komunikacji UART w oparciu o protokół OSOS.
-*
-* Protokół został utworzony w oparciu o kod źródłowy dostarczony przez dr inż Bogdana Kreczmera.
-*
-* @author Michał Dołharz
-*
-*/
-
 #include "OSOS_CRC8.h"
 
 unsigned int CRC8_SingleByte(unsigned int Data2)

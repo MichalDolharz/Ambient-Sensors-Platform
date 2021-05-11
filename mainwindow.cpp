@@ -1,12 +1,3 @@
-/**
-* @file mainwindow.cpp
-* @brief Obsługa slotów i sygnałów Qt
-*
-* @author Michał Dołharz
-*
-*/
-
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "OSOS_CRC8.h"
@@ -18,10 +9,10 @@ MainWindow::MainWindow(QWidget *parent)
     this->device = new QSerialPort(this);
 }
 
-MainWindow::MainWindow(Zone &zone, QWidget *parent)
+MainWindow::MainWindow(View &view, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
-    front = &zone;
+    front = &view;
     ui->setupUi(this);
     this->device = new QSerialPort(this);
 }
@@ -132,14 +123,15 @@ void MainWindow::on_pushButtonClose_clicked()
     }
 }
 
-void MainWindow::demandRepeat() {
+// Currently not used, but might be used in the future
+/*void MainWindow::demandRepeat() {
   if(this->device->isOpen() && this->device->isWritable()) {
     //this->addToLogs("Sending repeat demand");
     this->device->write("REPEAT");
   } else {
     this->addToLogs("Can't send repeat command. The port is closed.");
   }
-}
+}*/
 
 // Czytanie danych z otworzonego potru
 void MainWindow::readFromPort() {
@@ -165,9 +157,9 @@ void MainWindow::readFromPort() {
     }
     else
     {
-        //qDebug() << "Parsowanie ramki |" + msg + "| nieudane";
+        //qDebug() << "PARSOWANIE RAMKI |" + msg + "| NIEUDANE";
         this->addToLogs("PARSOWANIE RAMKI |" + msg + "| NIEUDANE");
-        this->demandRepeat();
+        //this->demandRepeat();
     }
   }
 }

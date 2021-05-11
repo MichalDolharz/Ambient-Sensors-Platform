@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setup_68',['setup',['../platform__software_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'platform_software.ino']]]
+  ['readfromport_114',['readFromPort',['../class_main_window.html#a42f11195758f78967e670779c4535708',1,'MainWindow']]]
 ];

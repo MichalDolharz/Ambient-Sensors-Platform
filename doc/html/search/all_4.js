@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getstatus_12',['getStatus',['../platform__software_8ino.html#ace0aeb3a10f1029523a91d2f88e43e56',1,'platform_software.ino']]]
+  ['front_24',['front',['../class_main_window.html#a3ca96235f7161b512044e24936090b85',1,'MainWindow']]]
 ];

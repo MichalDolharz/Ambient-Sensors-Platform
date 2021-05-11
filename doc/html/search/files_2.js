@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['platform_5fsoftware_2eino_49',['platform_software.ino',['../platform__software_8ino.html',1,'']]]
+  ['osos_5fcrc8_2eh_87',['OSOS_CRC8.h',['../_o_s_o_s___c_r_c8_8h.html',1,'']]]
 ];

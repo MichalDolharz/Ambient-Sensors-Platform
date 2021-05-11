@@ -8,17 +8,17 @@
 
 #include "mainwindow.h"
 //#include "sensorsfront.h"
-#include "blocks.h"
-#include <QtGui>
+//#include "blocks.h"
+//#include <QtGui>
 #include <QApplication>
-#include <QGraphicsScene>
+//#include <QGraphicsScene>
 #include <QGraphicsView>
-#include <QGraphicsRectItem>
-#include <QGraphicsItem>
-#include "block.h"
-#include <QPixmap>
-#include <QDebug>
-#include "zone.h"
+//#include <QGraphicsRectItem>
+//#include <QGraphicsItem>
+//#include "block.h"
+//#include <QPixmap>
+//#include <QDebug>
+#include "view.h"
 
 
 /*!
@@ -33,25 +33,24 @@ int main(int argc, char *argv[])
 
 
     QGraphicsView sensorView;
-    QGraphicsScene* scene = new QGraphicsScene(0, 0, 800, 600, &sensorView);
+    QGraphicsScene* scene = new QGraphicsScene(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, &sensorView);
 
     // Background color
-    QRadialGradient backgroundGradient(400, 300, 370);
-    backgroundGradient.setColorAt(0, QColor(109, 118, 183));
-    backgroundGradient.setColorAt(1, QColor(6, 35, 105));
-    scene->setBackgroundBrush(backgroundGradient);
-    sensorView.setScene(scene);
+    QRadialGradient backgroundGradient(WINDOW_WIDTH/2, WINDOW_HEIGHT/2, 370); // 370 is gradient radius
+    QColor DarkBlue(109, 118, 183); // color for outer
+    QColor Blue(6, 35, 105); // color for center point
+    backgroundGradient.setColorAt(0, DarkBlue);
+    backgroundGradient.setColorAt(1, Blue);
+    scene->setBackgroundBrush(backgroundGradient); // set background color
 
-    //Zone *front = new Zone(scene, frontView);
-    Zone front(scene, frontView);
+    sensorView.setScene(scene); // sets the scene
 
-    MainWindow w(front);
-    //front->move(2, 0, 0, -50);
-    //front->setStatus(2, 2);
+    View front(scene, frontView); // defines front view (so all the blocks and view in general)
 
-    w.setWindowTitle("Configuration");
-    sensorView.setWindowTitle("Sensors");
-    //s.setWindowTitle("Front sensors");
+    MainWindow w(front); // must be defined after View (cause it's its parameter)
+
+    w.setWindowTitle("Configuration"); // sets title to configuration window
+    sensorView.setWindowTitle("Sensors"); // sets title to sensors view
 
     w.show();
     sensorView.show();

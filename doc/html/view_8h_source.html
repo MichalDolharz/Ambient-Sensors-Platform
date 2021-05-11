@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Platforma czujników – WDS: Plik źródłowy view.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Platforma czujników – WDS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('view_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">view.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="view_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef VIEW_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define VIEW_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="zone_8h.html">zone.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#include &lt;QGraphicsView&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//#include &lt;QImage&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QGraphicsPixmapItem&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="view_8h.html#a624422c9b8b024d72eb653db4700ddb1">   21</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="view_8h.html#a624422c9b8b024d72eb653db4700ddb1">viewModes</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    frontView,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    backView,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    bothSidesView</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_view.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_view.html">View</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_view.html#a4f5770371ec490569847988e659ee62c">View</a>(QGraphicsScene* scene, <span class="keywordtype">int</span> viewType = frontView);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_view.html#a2d3130df1bc90cfc81121ff08ac3259d">setStatus</a>(<span class="keywordtype">int</span> <a class="code" href="platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4">sensor</a>, <span class="keywordtype">int</span> status);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//void move(int sensor, int status, int x, int y);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_view.html#af7a5eed9fdce2dcf7b3b85a55c042b7e">   50</a></span>&#160;    QGraphicsScene* <a class="code" href="class_view.html#af7a5eed9fdce2dcf7b3b85a55c042b7e">sceneHandle</a>; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_view.html#a7bcc268d8c4894625078327e68f60c8e">   51</a></span>&#160;    <a class="code" href="class_zone.html">Zone</a>** <a class="code" href="class_view.html#a7bcc268d8c4894625078327e68f60c8e">view</a>;                 </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_view.html#a30920f99e6bc06c39b22e512d433036d">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_view.html#a30920f99e6bc06c39b22e512d433036d">viewMode</a>;                </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_view.html#aa7b80bfd4dc2c8b965adfea7dedbdd32">   53</a></span>&#160;    <span class="keywordtype">int</span> *<a class="code" href="class_view.html#aa7b80bfd4dc2c8b965adfea7dedbdd32">statuses</a>;               </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VIEW_H</span></div>
+<div class="ttc" id="aclass_view_html"><div class="ttname"><a href="class_view.html">View</a></div><div class="ttdoc">The View class.</div><div class="ttdef"><b>Definition:</b> view.h:31</div></div>
+<div class="ttc" id="aclass_view_html_a2d3130df1bc90cfc81121ff08ac3259d"><div class="ttname"><a href="class_view.html#a2d3130df1bc90cfc81121ff08ac3259d">View::setStatus</a></div><div class="ttdeci">setStatus(int sensor, int status)</div><div class="ttdoc">Set new status on given as a parameter sensor. Updates the scene.</div><div class="ttdef"><b>Definition:</b> view.cpp:57</div></div>
+<div class="ttc" id="aclass_view_html_a30920f99e6bc06c39b22e512d433036d"><div class="ttname"><a href="class_view.html#a30920f99e6bc06c39b22e512d433036d">View::viewMode</a></div><div class="ttdeci">int viewMode</div><div class="ttdoc">View mode.</div><div class="ttdef"><b>Definition:</b> view.h:52</div></div>
+<div class="ttc" id="aclass_view_html_a4f5770371ec490569847988e659ee62c"><div class="ttname"><a href="class_view.html#a4f5770371ec490569847988e659ee62c">View::View</a></div><div class="ttdeci">View(QGraphicsScene *scene, int viewType=frontView)</div><div class="ttdoc">View constructor. Creates view based on vieType parameter and adds to the scene handle.</div><div class="ttdef"><b>Definition:</b> view.cpp:3</div></div>
+<div class="ttc" id="aclass_view_html_a7bcc268d8c4894625078327e68f60c8e"><div class="ttname"><a href="class_view.html#a7bcc268d8c4894625078327e68f60c8e">View::view</a></div><div class="ttdeci">Zone ** view</div><div class="ttdoc">2D array of View objects.</div><div class="ttdef"><b>Definition:</b> view.h:51</div></div>
+<div class="ttc" id="aclass_view_html_aa7b80bfd4dc2c8b965adfea7dedbdd32"><div class="ttname"><a href="class_view.html#aa7b80bfd4dc2c8b965adfea7dedbdd32">View::statuses</a></div><div class="ttdeci">int * statuses</div><div class="ttdoc">Holds statuses in order.</div><div class="ttdef"><b>Definition:</b> view.h:53</div></div>
+<div class="ttc" id="aclass_view_html_af7a5eed9fdce2dcf7b3b85a55c042b7e"><div class="ttname"><a href="class_view.html#af7a5eed9fdce2dcf7b3b85a55c042b7e">View::sceneHandle</a></div><div class="ttdeci">QGraphicsScene * sceneHandle</div><div class="ttdoc">Scene handle. Points to the original scene to add items.</div><div class="ttdef"><b>Definition:</b> view.h:50</div></div>
+<div class="ttc" id="aclass_zone_html"><div class="ttname"><a href="class_zone.html">Zone</a></div><div class="ttdoc">The Zone class. Defines zone (column/pole of blocks).</div><div class="ttdef"><b>Definition:</b> zone.h:27</div></div>
+<div class="ttc" id="aplatform__software_8ino_html_a121acd7d54db2c37fcccbf3c1b9c0df4"><div class="ttname"><a href="platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4">sensor</a></div><div class="ttdeci">int sensor</div><div class="ttdoc">Sensors counter, range 0-4 (five sensors)</div><div class="ttdef"><b>Definition:</b> platform_software.ino:29</div></div>
+<div class="ttc" id="aview_8h_html_a624422c9b8b024d72eb653db4700ddb1"><div class="ttname"><a href="view_8h.html#a624422c9b8b024d72eb653db4700ddb1">viewModes</a></div><div class="ttdeci">viewModes</div><div class="ttdoc">Holds modes of view.</div><div class="ttdef"><b>Definition:</b> view.h:21</div></div>
+<div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div><div class="ttdoc">Header for column/pole of blocks.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="view_8h.html">view.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

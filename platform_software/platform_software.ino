@@ -27,9 +27,9 @@ int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STAT
 int dist;//!< Variable that holds measured distance.
 char *msg; //!< Variable that holds the data frame to be send to the application.
 int sensor = 0; //!< Sensors counter, range 0-4 (five sensors)
-unsigned long savedTime[] = {0, 0, 0, 0, 0};
-unsigned long thisTime[] = {0, 0, 0, 0, 0};
-unsigned long timeStopToSendDataFrame;
+//unsigned long savedTime[] = {0, 0, 0, 0, 0}; //!< Saves time for each sensor. 
+unsigned long thisTime;  //!< Saves current time to be compared with other saved time.
+unsigned long timeStopToSendDataFrame; //!< Saves time so Serial has time to finish.
 //String a = "";
 //int b = 0;
 //unsigned long counter = 0; //!< Counter for debugging puposes
@@ -67,9 +67,9 @@ void loop()
         msg = CreateDataFrame(sensor, current_status[sensor]);
         Serial.println(msg);
         timeStopToSendDataFrame = millis();
-        while(thisTime[sensor] - timeStopToSendDataFrame < 100)
+        while(thisTime - timeStopToSendDataFrame < 100)
         {
-          thisTime[sensor] = millis();  
+          thisTime = millis();  
         }
 
         //////

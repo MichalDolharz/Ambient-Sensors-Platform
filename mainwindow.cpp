@@ -152,7 +152,8 @@ void MainWindow::readFromPort() {
         //qDebug() << "Parsowanie ramki |" + msg + "| udane";
         this->addToLogs("Parsowanie ramki |" + msg + "| udane");
         this->addToComm("Sensor: " + QString::number(sensor) + " status: " + QString::number(status));
-        front->setStatus(sensor, status);
+        if(sensor<5)
+            front->setStatus(sensor, status);
 
     }
     else

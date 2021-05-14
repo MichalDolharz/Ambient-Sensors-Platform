@@ -10,7 +10,7 @@
 #define RANGE_ZONE_3 10 //!< Max range of zone 3 (in centimeters).
 #define RANGE_ZONE_4 5  //!< Max range of zone 4 (in centimeters).
 
-#define SENSORS 5 //!< Number of used sensors.
+#define SENSORS 10 //!< Number of used sensors.
 
 #define CHECK_COUNT 100 //!< Counter of measurements used to establish status when new status might occur.
 #define STATUS_DELAY_TIME 0 //!< Delay to slow down sensors.
@@ -20,10 +20,10 @@
  */
 typedef unsigned char byte;
 
-HCSR04 hc(2,new int[SENSORS]{3,4,5,6,7},SENSORS); //!< Object of HCSR04 class, representing five sensors. Parameters: (trig pin , echo pins, number of sensors).
+HCSR04 hc(2,new int[SENSORS]{3,4,5,6,7, 8, 9, 10, 11, 12},SENSORS); //!< Object of HCSR04 class, representing five sensors. Parameters: (trig pin , echo pins, number of sensors).
 
 int new_status; //!< Variable with new status to be verified and set in case of positive verification..
-int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START}; //!< //!< Variable that holds the current status.
+int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START, STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START}; //!< //!< Variable that holds the current status.
 int dist;//!< Variable that holds measured distance.
 char *msg; //!< Variable that holds the data frame to be send to the application.
 int sensor = 0; //!< Sensors counter, range 0-4 (five sensors)
@@ -66,6 +66,12 @@ void loop()
         current_status[sensor] = new_status;
         msg = CreateDataFrame(sensor, current_status[sensor]);
         Serial.println(msg);
+        /*for(int s = 0; s < 10; s++)
+        {
+          Serial.print(current_status[s]);
+          Serial.print(" ");
+        }
+        Serial.println(" ");*/
         timeStopToSendDataFrame = millis();
         while(thisTime - timeStopToSendDataFrame < 100)
         {

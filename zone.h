@@ -14,6 +14,7 @@
 //#include <QPainter>
 #include "block.h"
 #include <QDebug>
+#include <QRadialGradient>
 
 #define BLOCK_WIDTH 70          //!< Simple block width.
 #define BLOCK_WIDTH_SPACE 10    //!< Horizontal space between blocks.
@@ -36,9 +37,10 @@ public:
      * \param[out] scene Scene handle. Created zone is added to this scene.
      * \param[in] x x coordinate, at which the zone will be created.
      * \param[in] y y coordinate, at which the zone will be created.
-     * \param[in] zoneNumber Number of zone to be created. Amount of blocks and their color is based on this parameter.
+     * \param[in] zoneNumber Number of zone, where <c>0</c> is the red one and 3 is the green one. Data correctness is not being checked. Amount of blocks and their color is based on this parameter.
+     * \param[in] zonePosition Number of position of zone to be created, where <c>0</c> is the farthest left one and <4> is the farthest right one. Rotation and position of a zone is based on this parameter.
      */
-    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int viewZoneNumber);
+    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition);
 
     /*!
      * \brief Shows zone.
@@ -79,6 +81,38 @@ private:
      * \param[in] widget Optional QWidget object.
      */
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+    /*!
+     * \brief Returns a gradient color for a block defined by given parameters.
+     * \param[in] blockStartEdge Starting edge of block.
+     * \param[in] zoneNumber Number of zone, where <c>0</c> is the red one and 3 is the green one. Color is chosen based on this parameter. Data correctness is not being checked.
+     * \param[in] blockNumber Number of block in zone, where <c>0</c> is the lowest one and 3/2/1/0 is the highest one in zone 3/2/1/0. Data correctness is not being checked.
+     * \return Returns QRadialGradient object with colors and a set position.
+     */
+    QRadialGradient getGradColor(int blockStartEdge, int zoneNumber, int blockNumber);
+
+    /*!
+     * \brief Returns QPath object that will be a shape of a block defined by given parameters.
+     * \param[in] blockStartEdge Starting edge of block.
+     * \param[in] blockEndEdge Ending of block.
+     * \return Returns QPath object with shape of a block.
+     */
+    QPainterPath getBlockPath(int blockStartEdge, int blockEndEdge);
+
+    /*!
+     * \brief Sets a given shape and a gradient color to a block.
+     * \param[out] block Block to be given shape and color.
+     * \param[in] blockPath Shape of a block.
+     * \param[in] brush Gradient color of a block.
+     */
+    void createBlock(QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush);
+
+    /*!
+     * \brief Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number.
+     * \param[out] zone Zone to be moved.
+     * \param[in] zonePosition Position to which a zone will be moved.
+     */
+    void moveToDestination(QGraphicsItemGroup *zone, int zonePosition);
 
     /*!
      * \brief Holds defined colors.

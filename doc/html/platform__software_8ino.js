@@ -16,7 +16,7 @@ var platform__software_8ino =
     [ "CRC8_SingleByte", "platform__software_8ino.html#a3b6cdad88337909c7008f4c45fa391f8", null ],
     [ "CreateDataFrame", "platform__software_8ino.html#a1c4addbd422403aa2d3fdcf64769e447", null ],
     [ "getStatus", "platform__software_8ino.html#ace0aeb3a10f1029523a91d2f88e43e56", null ],
-    [ "hc", "platform__software_8ino.html#afd8dfa544b188769b057211223e24280", null ],
+    [ "hc", "platform__software_8ino.html#a10cb79a12a95463e1bf6a946f59c0d49", null ],
     [ "loop", "platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f", null ],
     [ "nibbleToHex", "platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa", null ],
     [ "setup", "platform__software_8ino.html#a4fc01d736fe50cf5b977f755b675f11d", null ],

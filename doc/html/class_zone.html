@@ -109,9 +109,9 @@ Metody publiczne</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a37c9721c0d592a7a231f4e6dbae93277">Zone</a> ()</td></tr>
 <tr class="memdesc:a37c9721c0d592a7a231f4e6dbae93277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_zone.html" title="The Zone class. Defines zone (column/pole of blocks).">Zone</a> constructor. <br /></td></tr>
 <tr class="separator:a37c9721c0d592a7a231f4e6dbae93277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1fc1e2df2176377b75dd575381a12a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#ae1fc1e2df2176377b75dd575381a12a3">Zone</a> (QGraphicsScene *scene, int x, int y, int zoneNumber)</td></tr>
-<tr class="memdesc:ae1fc1e2df2176377b75dd575381a12a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_zone.html" title="The Zone class. Defines zone (column/pole of blocks).">Zone</a> constructor. Creates desired zone at desired placed and adds it to the scene.  <a href="class_zone.html#ae1fc1e2df2176377b75dd575381a12a3">Więcej...</a><br /></td></tr>
-<tr class="separator:ae1fc1e2df2176377b75dd575381a12a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c6df7f68f32fa65fd1862e92f3fca7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a26c6df7f68f32fa65fd1862e92f3fca7">Zone</a> (QGraphicsScene *scene, int x, int y, int zoneNumber, int zonePosition)</td></tr>
+<tr class="memdesc:a26c6df7f68f32fa65fd1862e92f3fca7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_zone.html" title="The Zone class. Defines zone (column/pole of blocks).">Zone</a> constructor. Creates desired zone at desired placed and adds it to the scene.  <a href="class_zone.html#a26c6df7f68f32fa65fd1862e92f3fca7">Więcej...</a><br /></td></tr>
+<tr class="separator:a26c6df7f68f32fa65fd1862e92f3fca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af32f12aa442fb415a328add9708cb06f"><td class="memItemLeft" align="right" valign="top"><a id="af32f12aa442fb415a328add9708cb06f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#af32f12aa442fb415a328add9708cb06f">show</a> ()</td></tr>
 <tr class="memdesc:af32f12aa442fb415a328add9708cb06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows zone. <br /></td></tr>
@@ -135,19 +135,31 @@ Metody prywatne</h2></td></tr>
 <tr class="memitem:abe21b8e9cf49f73b3d4fa896f067f7bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#abe21b8e9cf49f73b3d4fa896f067f7bd">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
 <tr class="memdesc:abe21b8e9cf49f73b3d4fa896f067f7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented from QGraphicsItem. Paints the contents of an item in local coordinates.  <a href="class_zone.html#abe21b8e9cf49f73b3d4fa896f067f7bd">Więcej...</a><br /></td></tr>
 <tr class="separator:abe21b8e9cf49f73b3d4fa896f067f7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4e346ef06922b29e660cdaa7a4a544"><td class="memItemLeft" align="right" valign="top">QRadialGradient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a5c4e346ef06922b29e660cdaa7a4a544">getGradColor</a> (int blockStartEdge, int zoneNumber, int blockNumber)</td></tr>
+<tr class="memdesc:a5c4e346ef06922b29e660cdaa7a4a544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a gradient color for a block defined by given parameters.  <a href="class_zone.html#a5c4e346ef06922b29e660cdaa7a4a544">Więcej...</a><br /></td></tr>
+<tr class="separator:a5c4e346ef06922b29e660cdaa7a4a544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ec23487566b5372ee6ec140bb6de47"><td class="memItemLeft" align="right" valign="top">QPainterPath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a07ec23487566b5372ee6ec140bb6de47">getBlockPath</a> (int blockStartEdge, int blockEndEdge)</td></tr>
+<tr class="memdesc:a07ec23487566b5372ee6ec140bb6de47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns QPath object that will be a shape of a block defined by given parameters.  <a href="class_zone.html#a07ec23487566b5372ee6ec140bb6de47">Więcej...</a><br /></td></tr>
+<tr class="separator:a07ec23487566b5372ee6ec140bb6de47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a866da8643b8d45647f26a95d18c739ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a866da8643b8d45647f26a95d18c739ac">createBlock</a> (QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush)</td></tr>
+<tr class="memdesc:a866da8643b8d45647f26a95d18c739ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a given shape and a gradient color to a block.  <a href="class_zone.html#a866da8643b8d45647f26a95d18c739ac">Więcej...</a><br /></td></tr>
+<tr class="separator:a866da8643b8d45647f26a95d18c739ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669507c164bfb329ad4959e2f2b26d8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a669507c164bfb329ad4959e2f2b26d8e">moveToDestination</a> (QGraphicsItemGroup *<a class="el" href="class_zone.html#ae8fa49ced4f1afc38ecd8e2095904027">zone</a>, int zonePosition)</td></tr>
+<tr class="memdesc:a669507c164bfb329ad4959e2f2b26d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number.  <a href="class_zone.html#a669507c164bfb329ad4959e2f2b26d8e">Więcej...</a><br /></td></tr>
+<tr class="separator:a669507c164bfb329ad4959e2f2b26d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
-<tr class="memitem:a9d477c19d79db95840ec8ebe7239b879"><td class="memItemLeft" align="right" valign="top"><a id="a9d477c19d79db95840ec8ebe7239b879"></a>
-QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#a9d477c19d79db95840ec8ebe7239b879">Grupa</a></td></tr>
-<tr class="memdesc:a9d477c19d79db95840ec8ebe7239b879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the group of blocks. <br /></td></tr>
-<tr class="separator:a9d477c19d79db95840ec8ebe7239b879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fa49ced4f1afc38ecd8e2095904027"><td class="memItemLeft" align="right" valign="top"><a id="ae8fa49ced4f1afc38ecd8e2095904027"></a>
+QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zone.html#ae8fa49ced4f1afc38ecd8e2095904027">zone</a></td></tr>
+<tr class="memdesc:ae8fa49ced4f1afc38ecd8e2095904027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the group of blocks. <br /></td></tr>
+<tr class="separator:ae8fa49ced4f1afc38ecd8e2095904027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>The <a class="el" href="class_zone.html" title="The Zone class. Defines zone (column/pole of blocks).">Zone</a> class. Defines zone (column/pole of blocks). </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a id="ae1fc1e2df2176377b75dd575381a12a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1fc1e2df2176377b75dd575381a12a3">&#9670;&nbsp;</a></span>Zone()</h2>
+<a id="a26c6df7f68f32fa65fd1862e92f3fca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c6df7f68f32fa65fd1862e92f3fca7">&#9670;&nbsp;</a></span>Zone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +186,13 @@ QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>zoneNumber</em>&#160;</td>
+          <td class="paramname"><em>zoneNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zonePosition</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,7 +208,8 @@ QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class
     <tr><td class="paramdir">[out]</td><td class="paramname">scene</td><td>Scene handle. Created zone is added to this scene. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>x coordinate, at which the zone will be created. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>y coordinate, at which the zone will be created. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">zoneNumber</td><td>Number of zone to be created. Amount of blocks and their color is based on this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zoneNumber</td><td>Number of zone, where <code>0</code> is the red one and 3 is the green one. Data correctness is not being checked. Amount of blocks and their color is based on this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zonePosition</td><td>Number of position of zone to be created, where <code>0</code> is the farthest left one and &lt;4&gt; is the farthest right one. Rotation and position of a zone is based on this parameter. </td></tr>
   </table>
   </dd>
 </dl>
@@ -223,6 +242,157 @@ QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 <p>Defines the outer bounds of the item as a rectangle. </p>
 <dl class="section return"><dt>Zwraca</dt><dd>QRectF object defining rectangle region. </dd></dl>
+
+</div>
+</div>
+<a id="a866da8643b8d45647f26a95d18c739ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866da8643b8d45647f26a95d18c739ac">&#9670;&nbsp;</a></span>createBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Zone::createBlock </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsPathItem *&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPainterPath&#160;</td>
+          <td class="paramname"><em>blockPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QBrush&#160;</td>
+          <td class="paramname"><em>brush</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a given shape and a gradient color to a block. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">block</td><td><a class="el" href="class_block.html" title="The Block class. Defines single block.">Block</a> to be given shape and color. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockPath</td><td>Shape of a block. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">brush</td><td>Gradient color of a block. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07ec23487566b5372ee6ec140bb6de47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ec23487566b5372ee6ec140bb6de47">&#9670;&nbsp;</a></span>getBlockPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPainterPath Zone::getBlockPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockStartEdge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockEndEdge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns QPath object that will be a shape of a block defined by given parameters. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockStartEdge</td><td>Starting edge of block. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockEndEdge</td><td>Ending of block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Returns QPath object with shape of a block. </dd></dl>
+
+</div>
+</div>
+<a id="a5c4e346ef06922b29e660cdaa7a4a544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4e346ef06922b29e660cdaa7a4a544">&#9670;&nbsp;</a></span>getGradColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRadialGradient Zone::getGradColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockStartEdge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoneNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blockNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a gradient color for a block defined by given parameters. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockStartEdge</td><td>Starting edge of block. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zoneNumber</td><td>Number of zone, where <code>0</code> is the red one and 3 is the green one. Color is chosen based on this parameter. Data correctness is not being checked. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockNumber</td><td>Number of block in zone, where <code>0</code> is the lowest one and 3/2/1/0 is the highest one in zone 3/2/1/0. Data correctness is not being checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Returns QRadialGradient object with colors and a set position. </dd></dl>
 
 </div>
 </div>
@@ -277,6 +447,51 @@ QGraphicsItemGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Horizontal move </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Vertical move </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a669507c164bfb329ad4959e2f2b26d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669507c164bfb329ad4959e2f2b26d8e">&#9670;&nbsp;</a></span>moveToDestination()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Zone::moveToDestination </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItemGroup *&#160;</td>
+          <td class="paramname"><em>zone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zonePosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">zone</td><td><a class="el" href="class_zone.html" title="The Zone class. Defines zone (column/pole of blocks).">Zone</a> to be moved. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zonePosition</td><td>Position to which a zone will be moved. </td></tr>
   </table>
   </dd>
 </dl>

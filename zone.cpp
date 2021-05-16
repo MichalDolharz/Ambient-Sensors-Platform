@@ -2,125 +2,114 @@
 
 #define FIRST_BLOCK_START_EDGE 236
 #define FIRST_BLOCK_END_EDGE 277
+#define EDGE_TO_EDGE 45
+#define SIDE_TO_SIDE 2
 
 Zone::Zone()
 {
     this->zone = new QGraphicsItemGroup();
 }
 
-Zone::Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int viewZoneNumber)
+Zone::Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition)
 {
-    int numberOfBlocks;
-    QColor setColor;
-    viewZoneNumber -=2; // {0,1,2,3,4} --> {-2, -1, 0, 1, 2} (will be used to rotate group)
+    int numberOfBlocks = 4 - zoneNumber; // number of blocks to set into the zone
+    zonePosition -=2; // {0,1,2,3,4} --> {-2, -1, 0, 1, 2} (will be used to rotate the zone (group of blocks))
 
-    this->zone = new QGraphicsItemGroup;
+    this->zone = new QGraphicsItemGroup; // sets zone object pointer
 
-    switch(zoneNumber)
+    QGraphicsPathItem *block; // shape of block will be set to this variable
+
+    // Generating blocks
+    for(int blockNumber = 0; blockNumber < numberOfBlocks; blockNumber++)
     {
-    case 0:
-        setColor = Colors::DarkGreen;
-        numberOfBlocks = 4;
-        break;
-    case 1:
-        setColor = Colors::DarkYellow;
-        numberOfBlocks = 3;
-        break;
-    case 2:
-        setColor = Colors::DarkOrange;
-        numberOfBlocks = 2;
-        break;
-    case 3:
-        setColor = Colors::DarkRed;
-        numberOfBlocks = 1;
-        break;
-    default:
-        setColor = Qt::white;
-        break;
+        int blockStartEdge = (FIRST_BLOCK_START_EDGE+blockNumber*EDGE_TO_EDGE); // starting edge of the first block (reference point for next instructions)
+        int blockEndEdge = (FIRST_BLOCK_END_EDGE+blockNumber*EDGE_TO_EDGE); // ending edge of the first block (reference point for next instructions)
+
+        QPainterPath blockPath = getBlockPath(blockStartEdge, blockEndEdge);
+
+        QBrush brush(getGradColor(blockStartEdge, zoneNumber, blockNumber)); // sets the gradient which will be applied to the block
+
+        block = new Block(); // creates new block object
+
+        createBlock(block, blockPath, brush); // sets the block with previously set configuration
+
+        zone->addToGroup(block); // adds to group
     }
+    moveToDestination(zone, zonePosition); // moves the group to the right position
 
-    QGraphicsPathItem *tmp;
-    for(int i = 0; i < numberOfBlocks; i++)
-    {
-        int blockStartEdge = (FIRST_BLOCK_START_EDGE+i*45);
-        int blockEndEdge = (FIRST_BLOCK_END_EDGE+i*45);
-        QRect Rect1(-blockStartEdge, -blockStartEdge, 2*blockStartEdge, 2*blockStartEdge); // creates square of width = 2*blockStartEdge
-        QRect Rect2(-blockEndEdge, -blockEndEdge, 2*blockEndEdge, 2*blockEndEdge); // creates square of width = 2*blockEndEdge
-        QPointF Rcenter(0, 0); // center point
-
-        QPainterPath myPath; // on this variable the block will be "built"
-
-        // Building block's shape (not block yet):
-        myPath.moveTo(Rcenter); // move to center
-        myPath.arcTo(Rect1, 352.5, 15); // crop the first circle. 15 degree. Centered to the Y axis
-        myPath.lineTo(Rcenter); // go back to the center
-        myPath.arcTo(Rect2, 352.5, 15); // crop the second circle. 15 degree. Centered to the Y axis
-        myPath.closeSubpath(); // end
-
-        //QPainterPath sim = myPath.simplified(); // not sure if version with simplified is any changed
-
-        tmp = new Block(); // creates block
-        tmp->setBrush(setColor); // sets color
-        tmp->setPen(Qt::NoPen); // hides block's border
-        tmp->setPath(myPath); // sets shape to the block
-        //tmp->setPath(sim); // version with simplified option used
-        tmp->setRotation(-90); // rotates
-
-        zone->addToGroup(tmp); // adds to group
-    }
-    zone->moveBy(0, FIRST_BLOCK_START_EDGE); // translates group so the starting edge of block is at the (0, 0) point
-    zone->setRotation(viewZoneNumber*17); // rotates zone
-    zone->moveBy(400, 281); // translates group to final position
-
-    scene->addItem(zone);
-
+    scene->addItem(zone); // adds zone to the scene
 }
 
-/*Zone::Zone(QGraphicsScene* scene, int x, int y, int zoneNumber)
+void Zone::moveToDestination(QGraphicsItemGroup *zone, int zonePosition)
 {
-    int numberOfBlocks;
-    QColor setColor;
+    zone->moveBy(0, FIRST_BLOCK_START_EDGE); // translates group so the starting edge of block is at the (0, 0) point
+    zone->setRotation(zonePosition*(15+SIDE_TO_SIDE)); // rotates zone
+    zone->moveBy(400, 281); // translates group to final position
+}
 
-    this->zone = new QGraphicsItemGroup;
+void Zone::createBlock(QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush)
+{
+    block->setBrush(brush); // set brush (gradient)
+    block->setPen(Qt::NoPen); // hides block's border
+    block->setPath(blockPath); // sets shape to the block
+    block->setRotation(-90); // rotates
+}
+
+
+QPainterPath Zone::getBlockPath(int blockStartEdge, int blockEndEdge)
+{
+    QRect rectStartEdge(-blockStartEdge, -blockStartEdge, 2*blockStartEdge, 2*blockStartEdge); // creates a square of width = 2*blockStartEdge
+    QRect rectEndEdge(-blockEndEdge, -blockEndEdge, 2*blockEndEdge, 2*blockEndEdge); // creates a square of width = 2*blockEndEdge
+
+    QPointF rectCenter(0, 0); // center point for creating the block path
+
+    QPainterPath blockPath; // on this variable the block will be "built"
+
+    // Building block's shape (not block yet):
+    blockPath.moveTo(rectCenter); // move to center
+    blockPath.arcTo(rectStartEdge, 352.5, 15); // crop the first circle. 15 degree. Centered to the Y axis
+    blockPath.lineTo(rectCenter); // go back to the center
+    blockPath.arcTo(rectEndEdge, 352.5, 15); // crop the second circle. 15 degree. Centered to the Y axis
+    blockPath.closeSubpath(); // end
+
+    return blockPath;
+}
+
+QRadialGradient Zone::getGradColor(int blockStartEdge, int zoneNumber, int blockNumber)
+{
+    QPointF gradCenter(blockStartEdge-(6+blockNumber*2), 0);
+    QRadialGradient gradColor(gradCenter, 30);
 
     switch(zoneNumber)
     {
     case 0:
-        setColor = Colors::DarkGreen;
-        numberOfBlocks = 4;
+        //setColor = Colors::DarkGreen;
+        gradColor.setColorAt(0, Colors::Green);
+        gradColor.setColorAt(1, Colors::DarkGreen);
         break;
     case 1:
-        setColor = Colors::DarkYellow;
-        numberOfBlocks = 3;
+        //setColor = Colors::DarkYellow;
+        gradColor.setColorAt(0, Colors::Yellow);
+        gradColor.setColorAt(1, Colors::DarkYellow);
         break;
     case 2:
-        setColor = Colors::DarkOrange;
-        numberOfBlocks = 2;
+        //setColor = Colors::DarkOrange;
+        gradColor.setColorAt(0, Colors::Orange);
+        gradColor.setColorAt(1, Colors::DarkOrange);
         break;
     case 3:
-        setColor = Colors::DarkRed;
-        numberOfBlocks = 1;
+        //setColor = Colors::DarkRed;
+        gradColor.setColorAt(0, Colors::Red);
+        gradColor.setColorAt(1, Colors::DarkRed);
         break;
     default:
-        setColor = Qt::white;
+        gradColor.setColorAt(0, Qt::white);
+        gradColor.setColorAt(1, Qt::black);
         break;
     }
 
-    QGraphicsRectItem *tmp;
-    for(int i = 0; i < numberOfBlocks; i++)
-    {
-        tmp = new Block();
-        tmp->setBrush(setColor);
-        tmp->setPen(Qt::NoPen);
-        tmp->setRect(0,(BLOCK_HEIGHT+BLOCK_HEIGHT_SPACE)*i, BLOCK_WIDTH, BLOCK_HEIGHT);
-        zone->addToGroup(tmp);
-    }
-
-    zone->moveBy(x-BLOCK_WIDTH/2, y);
-
-    scene->addItem(zone);
-
-}*/
+    return gradColor;
+}
 
 bool Zone::isHidden()
 {
@@ -154,4 +143,3 @@ QColor Zone::Colors::Orange(Qt::white);
 
 QColor Zone::Colors::DarkRed(227, 30, 36);
 QColor Zone::Colors::Red(Qt::white);
-

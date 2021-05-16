@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "Zone::Colors", "struct_zone_1_1_colors.html", null ],
-    [ "QGraphicsRectItem", null, [
+    [ "QGraphicsPathItem", null, [
       [ "Block", "class_block.html", null ]
     ] ],
     [ "QMainWindow", null, [

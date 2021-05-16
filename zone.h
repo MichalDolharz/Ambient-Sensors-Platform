@@ -38,7 +38,7 @@ public:
      * \param[in] y y coordinate, at which the zone will be created.
      * \param[in] zoneNumber Number of zone to be created. Amount of blocks and their color is based on this parameter.
      */
-    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber);
+    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int viewZoneNumber);
 
     /*!
      * \brief Shows zone.
@@ -64,7 +64,7 @@ public:
     void move(int x, int y);
 
 private:
-    QGraphicsItemGroup *Grupa; //!< Pointer to the group of blocks.
+    QGraphicsItemGroup *zone; //!< Pointer to the group of blocks.
 
     /*!
      * \brief Defines the outer bounds of the item as a rectangle.

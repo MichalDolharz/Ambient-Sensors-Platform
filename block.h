@@ -12,7 +12,9 @@
 //#include <QRectF>
 #include <QPainter>
 //#include <QGraphicsItem>
-#include <QGraphicsRectItem>
+//#include <QGraphicsRectItem>
+#include <QGraphicsPathItem>
+#include <QPainterPath>
 
 #define WINDOW_WIDTH 800  //!< Main (and every) window width.
 #define WINDOW_HEIGHT 600 //!< Main (and every) window height.
@@ -20,7 +22,7 @@
 /*!
  * \brief The Block class. Defines single block.
  */
-class Block : public QGraphicsRectItem
+class Block : public QGraphicsPathItem
 {
     public:
         /*!

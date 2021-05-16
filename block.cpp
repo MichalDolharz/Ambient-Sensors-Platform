@@ -5,6 +5,6 @@ Block::Block()//QGraphicsItem *parent)    : QGraphicsRectItem(parent)
 
 void Block::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    QGraphicsRectItem::paint(painter, option, widget);
+    QGraphicsPathItem::paint(painter, option, widget);
 }
 

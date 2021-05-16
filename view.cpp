@@ -15,7 +15,7 @@ View::View(QGraphicsScene* scene, int viewType)
         view[x] = new Zone[5];
         for(int y = 0; y < 4; y++)
         {
-            view[x][y] = Zone(scene, Xcenters[x], Ycenters[y], y);
+            view[x][y] = Zone(scene, Xcenters[x], Ycenters[y], y, x);
             if(y > 0)
             {
                view[x][y].hide();

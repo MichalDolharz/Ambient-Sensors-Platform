@@ -26,7 +26,7 @@ class Block : public QGraphicsPathItem
          * \brief Default Block class constructor.
          */
         Block();//QGraphicsItem *parent = Q_NULLPTR);
-
+    private:
         /*!
          * \brief Reimplemented from QGraphicsItem. Paints the contents of an item in local coordinates.
          * \param[in] painter QPainter object.

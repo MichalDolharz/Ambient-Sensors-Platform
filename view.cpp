@@ -7,6 +7,7 @@ View::View(QGraphicsScene* scene)
     int Xcenters[] = {240, 320, 400, 480, 560};
     int Ycenters[] = {100, 145, 190, 235};
 
+    // create front view
     for(int x = 0; x < 5; x++)
     {
         for(int y = 0; y < 4; y++)
@@ -19,6 +20,7 @@ View::View(QGraphicsScene* scene)
         }
     }
 
+    // create back view
     for(int x = 0; x < 5; x++)
     {
         for(int y = 0; y < 4; y++)
@@ -28,6 +30,7 @@ View::View(QGraphicsScene* scene)
         }
     }
 
+    // create left side of both sides view
     for(int x = 0; x < 5; x++)
     {
         for(int y = 0; y < 4; y++)
@@ -37,19 +40,17 @@ View::View(QGraphicsScene* scene)
         }
     }
 
+    // create right side of both sides view
     for(int x = 0; x < 5; x++)
     {
-        //bothSidesBackView[x] = new Zone[5];
         for(int y = 0; y < 4; y++)
         {
             bothSidesBackView[x][y] = Zone(scene, Xcenters[x], Ycenters[y], y, x, bothSidesBackViewMode);
-            //if(y > 0)
-            //{
-               bothSidesBackView[x][y].hide();
-            //}
+            bothSidesBackView[x][y].hide();
         }
     }
 
+    // Load car images
     int width, height;
 
         frontViewImg = new QGraphicsPixmapItem(QPixmap("D:/Qt_workspace/WDS_testy/qt_img/front.png"));
@@ -74,8 +75,10 @@ View::View(QGraphicsScene* scene)
 
         bothSidesViewImg->hide();
 
+        // save front view as default starting view
         this->thisViewMode = frontViewMode;
 
+        // set 0 to all the statuses
         for(int i = 0; i < 10; i++)
         {
             statuses[i] = 0;

@@ -52,6 +52,9 @@ public:
      */
     void hide();
 
+private:
+    QGraphicsItemGroup *zone; //!< Pointer to the group of blocks.
+
     /*!
      * \brief Checks if zone is hidden.
      * \return <c>True</c> if zone is hidden, <c>False</c> otherwise.
@@ -64,9 +67,6 @@ public:
      * \param[in] y Vertical move
      */
     void move(int x, int y);
-
-private:
-    QGraphicsItemGroup *zone; //!< Pointer to the group of blocks.
 
     /*!
      * \brief Defines the outer bounds of the item as a rectangle.

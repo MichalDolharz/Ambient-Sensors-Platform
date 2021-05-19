@@ -23,13 +23,13 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Strona główna",url:"index.html"},
-{text:"Klasy",url:"annotated.html",children:[
-{text:"Lista klas",url:"annotated.html"},
-{text:"Indeks klas",url:"classes.html"},
-{text:"Hierarchia klas",url:"hierarchy.html"},
-{text:"Składowe klas",url:"functions.html",children:[
-{text:"Wszystko",url:"functions.html",children:[
+{text:"Main Page",url:"index.html"},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -43,16 +43,17 @@ var menudata={children:[
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
 {text:"v",url:"functions.html#index_v"},
 {text:"y",url:"functions.html#index_y"},
 {text:"z",url:"functions.html#index_z"}]},
-{text:"Funkcje",url:"functions_func.html"},
-{text:"Zmienne",url:"functions_vars.html"}]}]},
-{text:"Pliki",url:"files.html",children:[
-{text:"Lista plików",url:"files.html"},
-{text:"Składowe plików",url:"globals.html",children:[
-{text:"Wszystko",url:"globals.html",children:[
+{text:"Functions",url:"functions_func.html"},
+{text:"Variables",url:"functions_vars.html"}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
@@ -67,8 +68,8 @@ var menudata={children:[
 {text:"t",url:"globals.html#index_t"},
 {text:"v",url:"globals.html#index_v"},
 {text:"w",url:"globals.html#index_w"}]},
-{text:"Funkcje",url:"globals_func.html"},
-{text:"Zmienne",url:"globals_vars.html"},
-{text:"Definicje typów",url:"globals_type.html"},
-{text:"Wyliczenia",url:"globals_enum.html"},
-{text:"Definicje",url:"globals_defs.html"}]}]}]}
+{text:"Functions",url:"globals_func.html"},
+{text:"Variables",url:"globals_vars.html"},
+{text:"Typedefs",url:"globals_type.html"},
+{text:"Enumerations",url:"globals_enum.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}

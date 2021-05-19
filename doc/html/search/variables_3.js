@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['green_136',['Green',['../struct_zone_1_1_colors.html#aa8e40edaef4ea8bdd19ee879b844be83',1,'Zone::Colors']]]
+  ['frontview_150',['frontView',['../class_view.html#ad655a676854df57c32dd50b991c0a190',1,'View']]],
+  ['frontviewimg_151',['frontViewImg',['../class_view.html#ac59bc8a785d862763c015b246c0c3b4c',1,'View']]]
 ];

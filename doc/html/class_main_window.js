@@ -10,6 +10,6 @@ var class_main_window =
     [ "on_pushButtonSearch_clicked", "class_main_window.html#a5dd6fd2201adc933d4fe8d053865710f", null ],
     [ "readFromPort", "class_main_window.html#a42f11195758f78967e670779c4535708", null ],
     [ "device", "class_main_window.html#a644ee4e747773d6ea59cdf4bee4deb49", null ],
-    [ "front", "class_main_window.html#a3ca96235f7161b512044e24936090b85", null ],
-    [ "ui", "class_main_window.html#a35466a70ed47252a0191168126a352a5", null ]
+    [ "ui", "class_main_window.html#a35466a70ed47252a0191168126a352a5", null ],
+    [ "view", "class_main_window.html#a2e0f5dbbb1c15feda21a27675e080a2e", null ]
 ];

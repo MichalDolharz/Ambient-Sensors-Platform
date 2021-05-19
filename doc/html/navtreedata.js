@@ -30,25 +30,25 @@ var NAVTREE =
     [ "Projekt interfejsu", "index.html#autotoc_md2", null ],
     [ "Protokół komunikacyjny OSOS", "index.html#autotoc_md3", null ],
     [ "Schemat ideowy układu czujników", "index.html#autotoc_md4", null ],
-    [ "Klasy", "annotated.html", [
-      [ "Lista klas", "annotated.html", "annotated_dup" ],
-      [ "Indeks klas", "classes.html", null ],
-      [ "Hierarchia klas", "hierarchy.html", "hierarchy" ],
-      [ "Składowe klas", "functions.html", [
-        [ "Wszystko", "functions.html", null ],
-        [ "Funkcje", "functions_func.html", null ],
-        [ "Zmienne", "functions_vars.html", null ]
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Pliki", "files.html", [
-      [ "Lista plików", "files.html", "files_dup" ],
-      [ "Składowe plików", "globals.html", [
-        [ "Wszystko", "globals.html", null ],
-        [ "Funkcje", "globals_func.html", null ],
-        [ "Zmienne", "globals_vars.html", null ],
-        [ "Definicje typów", "globals_type.html", null ],
-        [ "Wyliczenia", "globals_enum.html", null ],
-        [ "Definicje", "globals_defs.html", null ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]

@@ -10,8 +10,6 @@
 */
 
 #include <QGraphicsScene>
-//#include <QGraphicsRectItem>
-//#include <QPainter>
 #include "block.h"
 #include <QDebug>
 #include <QRadialGradient>
@@ -40,6 +38,7 @@ public:
      * \param[in] y y coordinate, at which the zone will be created.
      * \param[in] zoneNumber Number of zone, where <c>0</c> is the red one and 3 is the green one. Data correctness is not being checked. Amount of blocks and their color is based on this parameter.
      * \param[in] zonePosition Number of position of zone to be created, where <c>0</c> is the farthest left one and <4> is the farthest right one. Rotation and position of a zone is based on this parameter.
+     * \param[in] viewMode View, which zone being created will be part of.
      */
     Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition, int viewMode);
 
@@ -88,6 +87,7 @@ private:
      * \param[in] blockStartEdge Starting edge of block.
      * \param[in] zoneNumber Number of zone, where <c>0</c> is the red one and 3 is the green one. Color is chosen based on this parameter. Data correctness is not being checked.
      * \param[in] blockNumber Number of block in zone, where <c>0</c> is the lowest one and 3/2/1/0 is the highest one in zone 3/2/1/0. Data correctness is not being checked.
+     * \param[in] viewMode View, which zone being created will be part of.
      * \return Returns QRadialGradient object with colors and a set position.
      */
     QRadialGradient getGradColor(int blockStartEdge, int zoneNumber, int blockNumber, int viewMode);
@@ -105,6 +105,7 @@ private:
      * \param[out] block Block to be given shape and color.
      * \param[in] blockPath Shape of a block.
      * \param[in] brush Gradient color of a block.
+     * \param[in] viewMode View, which zone being created will be part of.
      */
     void createBlock(QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush, int viewMode);
 
@@ -112,6 +113,7 @@ private:
      * \brief Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number.
      * \param[out] zone Zone to be moved.
      * \param[in] zonePosition Position to which a zone will be moved.
+     * \param[in] viewMode View, which zone being created will be part of.
      */
     void moveToDestination(QGraphicsItemGroup *zone, int zonePosition, int viewMode);
 

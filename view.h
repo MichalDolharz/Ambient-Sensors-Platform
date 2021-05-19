@@ -9,11 +9,8 @@
 #define VIEW_H
 
 #include "zone.h"
-//#include <QGraphicsView>
 #include <QPixmap>
-//#include <QImage>
 #include <QGraphicsPixmapItem>
-//#include <QFileDialog>
 
 /*!
  * \brief Holds modes of view.
@@ -36,7 +33,6 @@ public:
     /*!
      * \brief View constructor. Creates view based on vieType parameter and adds to the scene handle.
      * \param[out] scene Scene handle.
-     * \param[in] viewType Sets view mode.
      */
     View(QGraphicsScene* scene);
 
@@ -45,8 +41,6 @@ public:
      * \param[in] sensor Sensor that will be given new status.
      * \param[in] status new status to be given.
      */
-    void setStatus(int sensor, int status);
-    void tmpsetStatus(int sensor, int status);
 
     void updateScreen(int sensor, int status);
 
@@ -54,32 +48,33 @@ public:
 
 private:
     QGraphicsScene* sceneHandle; //!< Scene handle. Points to the original scene to add items.
-    //Zone** frontView;                 //!< 2D array of View objects.
-    //Zone** backView;                 //!< 2D array of View objects.
-    //Zone** bothSidesFrontView;                 //!< 2D array of View objects.
-    //Zone** bothSidesBackView;                 //!< 2D array of View objects.
-    //Zone (*frontView)[5];                 //!< 2D array of View objects.
-    //Zone (*backView)[5];                 //!< 2D array of View objects.
-    //Zone (*bothSidesFrontView)[5];                 //!< 2D array of View objects.
-    //Zone (*bothSidesBackView)[5];                 //!< 2D array of View objects.
+
     Zone frontView[5][5];                 //!< 2D array of View objects.
     Zone backView[5][5];                //!< 2D array of View objects.
     Zone bothSidesFrontView[5][5];                 //!< 2D array of View objects.
-    Zone bothSidesBackView[5][5];
+    Zone bothSidesBackView[5][5];//!< 2D array of View objects.
 
-    int thisViewMode;                //!< View mode.
-    QGraphicsPixmapItem* frontViewImg;
-    QGraphicsPixmapItem* backViewImg;
-    QGraphicsPixmapItem* bothSidesViewImg;
+    int thisViewMode;                //!< Current view mode.
+    QGraphicsPixmapItem* frontViewImg; //!< Image of car's front
+    QGraphicsPixmapItem* backViewImg; //!< Image of car's back
+    QGraphicsPixmapItem* bothSidesViewImg; //!< Full car image
     int statuses[10];               //!< Holds statuses in order.
 
-    //void hideImg(QGraphicsPixmapItem* viewImg);
-    //void showImg(QGraphicsPixmapItem* viewImg);
-    void hideImg(QGraphicsPixmapItem* viewImg);
-    void showImg(QGraphicsPixmapItem* viewImg);
-    //bool hiddenView();
+    /*!
+     * \brief Checks if any of sensors from view (parameter) have status other than 0 (if any sensor is detecting an obstacle).
+     * \param[in] view View to be checked.
+     * \return Return <c>True</c> if any sensor in this view has status other than 0. Returns <c>False</c> if every sensor has status 0.
+     */
     bool checkStatuses(int view);
-    void updateView(int viewFrom, int viewTo, int sensor, int status, int prev_status);
+
+    /*!
+     * \brief Updates the view or changes it. to the new one.
+     * \param[in] viewFrom Current view.
+     * \param[in] viewTo If the same as viewFrom, the view will be updated. If other, the view will be changed.
+     * \param[in] sensor Sensor that detected change.
+     * \param[in] status New status to be set to the sensor.
+     */
+    void updateView(int viewFrom, int viewTo, int sensor, int status);
 };
 
 #endif // VIEW_H

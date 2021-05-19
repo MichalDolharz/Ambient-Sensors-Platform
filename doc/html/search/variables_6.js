@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orange_139',['Orange',['../struct_zone_1_1_colors.html#a544c95b7165d01f9fc796c30cc42abf0',1,'Zone::Colors']]]
+  ['new_5fstatus_154',['new_status',['../platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea',1,'platform_software.ino']]]
 ];

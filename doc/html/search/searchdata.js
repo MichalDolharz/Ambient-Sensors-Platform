@@ -3,8 +3,8 @@ var indexSectionsWithContent =
   0: "abcdfghilmnoprstuvwyz",
   1: "bcmvz",
   2: "bmopvz",
-  3: "abcghilmnoprsvz",
-  4: "cdfgmnorstuvyz",
+  3: "abcghilmnoprsuvz",
+  4: "bcdfgmnorstuvyz",
   5: "b",
   6: "v",
   7: "bcprsw",
@@ -26,14 +26,14 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Wszystko",
-  1: "Klasy",
-  2: "Pliki",
-  3: "Funkcje",
-  4: "Zmienne",
-  5: "Definicje typów",
-  6: "Wyliczenia",
-  7: "Definicje",
-  8: "Strony"
+  0: "All",
+  1: "Classes",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Typedefs",
+  6: "Enumerations",
+  7: "Macros",
+  8: "Pages"
 };
 

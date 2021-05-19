@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yellow_149',['Yellow',['../struct_zone_1_1_colors.html#ad9e80da71f9c8594ab1002ab66934098',1,'Zone::Colors']]]
+  ['view_164',['view',['../class_main_window.html#a2e0f5dbbb1c15feda21a27675e080a2e',1,'MainWindow']]]
 ];

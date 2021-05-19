@@ -9,10 +9,7 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
-//#include <QRectF>
 #include <QPainter>
-//#include <QGraphicsItem>
-//#include <QGraphicsRectItem>
 #include <QGraphicsPathItem>
 #include <QPainterPath>
 

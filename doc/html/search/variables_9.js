@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['thistime_144',['thisTime',['../platform__software_8ino.html#aa4c881ac5abd2acca33cc07101c11936',1,'platform_software.ino']]],
-  ['timestoptosenddataframe_145',['timeStopToSendDataFrame',['../platform__software_8ino.html#ae6aff613b89e1b2276b66216db79ec70',1,'platform_software.ino']]]
+  ['scenehandle_157',['sceneHandle',['../class_view.html#af7a5eed9fdce2dcf7b3b85a55c042b7e',1,'View']]],
+  ['sensor_158',['sensor',['../platform__software_8ino.html#a121acd7d54db2c37fcccbf3c1b9c0df4',1,'platform_software.ino']]],
+  ['statuses_159',['statuses',['../class_view.html#a4b0914a6fe0a8b9bafd7df8b8c75329d',1,'View']]]
 ];

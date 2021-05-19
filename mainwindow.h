@@ -78,6 +78,6 @@ private:
     */
     void addToComm(QString message);
 
-    View *front; //!< Handle to a View object.
+    View *view; //!< Handle to a View object.
 };
 #endif // MAINWINDOW_H

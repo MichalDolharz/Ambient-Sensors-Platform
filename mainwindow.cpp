@@ -9,10 +9,10 @@ MainWindow::MainWindow(QWidget *parent)
     this->device = new QSerialPort(this);
 }
 
-MainWindow::MainWindow(View &view, QWidget *parent)
+MainWindow::MainWindow(View &view_ref, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
-    front = &view;
+    view = &view_ref;
     ui->setupUi(this);
     this->device = new QSerialPort(this);
 }
@@ -152,8 +152,10 @@ void MainWindow::readFromPort() {
         //qDebug() << "Parsowanie ramki |" + msg + "| udane";
         this->addToLogs("Parsowanie ramki |" + msg + "| udane");
         this->addToComm("Sensor: " + QString::number(sensor) + " status: " + QString::number(status));
-        if(sensor<5)
-            front->setStatus(sensor, status);
+        //if(sensor<5)
+            view->updateScreen(sensor, status);
+        //if(sensor<5)
+        //    view->tmpsetStatus(sensor, status);
 
     }
     else

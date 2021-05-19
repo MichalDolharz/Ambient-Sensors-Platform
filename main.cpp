@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     sensorView.setScene(scene); // sets the scene
 
-    View front(scene, frontView); // defines front view (so all the blocks and view in general)
+    View front(scene); // defines front view (so all the blocks and view in general)
 
     MainWindow w(front); // must be defined after View (cause it's its parameter)
 

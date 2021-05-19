@@ -21,6 +21,7 @@
 #define BLOCK_HEIGHT 40         //!< Simple block height.
 #define BLOCK_HEIGHT_SPACE 5    //!< Vertical space between blocks.
 
+
 /*!
  * \brief The Zone class. Defines zone (column/pole of blocks).
  */
@@ -40,7 +41,7 @@ public:
      * \param[in] zoneNumber Number of zone, where <c>0</c> is the red one and 3 is the green one. Data correctness is not being checked. Amount of blocks and their color is based on this parameter.
      * \param[in] zonePosition Number of position of zone to be created, where <c>0</c> is the farthest left one and <4> is the farthest right one. Rotation and position of a zone is based on this parameter.
      */
-    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition);
+    Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition, int viewMode);
 
     /*!
      * \brief Shows zone.
@@ -89,7 +90,7 @@ private:
      * \param[in] blockNumber Number of block in zone, where <c>0</c> is the lowest one and 3/2/1/0 is the highest one in zone 3/2/1/0. Data correctness is not being checked.
      * \return Returns QRadialGradient object with colors and a set position.
      */
-    QRadialGradient getGradColor(int blockStartEdge, int zoneNumber, int blockNumber);
+    QRadialGradient getGradColor(int blockStartEdge, int zoneNumber, int blockNumber, int viewMode);
 
     /*!
      * \brief Returns QPath object that will be a shape of a block defined by given parameters.
@@ -105,14 +106,14 @@ private:
      * \param[in] blockPath Shape of a block.
      * \param[in] brush Gradient color of a block.
      */
-    void createBlock(QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush);
+    void createBlock(QGraphicsPathItem *block, QPainterPath blockPath, QBrush brush, int viewMode);
 
     /*!
      * \brief Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number.
      * \param[out] zone Zone to be moved.
      * \param[in] zonePosition Position to which a zone will be moved.
      */
-    void moveToDestination(QGraphicsItemGroup *zone, int zonePosition);
+    void moveToDestination(QGraphicsItemGroup *zone, int zonePosition, int viewMode);
 
     /*!
      * \brief Holds defined colors.

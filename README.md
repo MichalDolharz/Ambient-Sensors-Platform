@@ -6,7 +6,7 @@ Celem projektu jest stworzenie aplikacji ostrzegającej o przeszkodach w otoczen
 
 Przykład zastosowania podobnych czujników w praktyce widać na zdjęciu poniżej.
 
-![Przykład zastosowania podobnych czujników w praktyce](img/przyklad_toyota.jpg)
+![Przykład zastosowania podobnych czujników w praktyce](img/toyota.jpg)
 
 Projekt jest realizowany oczywiście w mniejszej skali, a więc na platformie czujników.  
 
@@ -22,9 +22,9 @@ Interfejs składa się z trzech okien, nazywanych widokami. Jest w pełni automa
 
 Poniżej znajdują się przykładowe wizualizacje. 
 
-![Widok czujników przednich](img/przod_program.png)
-![Widok czujników tylnych](img/tyl_program.png)
-![Widok całościowy](img/calosc_program.png)
+![Widok czujników przednich](img/frontSide_program.png)
+![Widok czujników tylnych](img/backSide_program.png)
+![Widok całościowy](img/bothSides_program.png)
 
 Istnieje jeszcze okno konfiguracji połączenia transmisji UART, włączane automatycznie i jednorazowo przy starcie aplikacji.
 

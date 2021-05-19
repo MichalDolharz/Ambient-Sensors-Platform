@@ -20,11 +20,11 @@ Parkując samochód kierowca trzyma obie ręce na kierownicy i rozgląda się pr
            
 Interfejs składa się z trzech okien, nazywanych widokami. Jest w pełni automatyczny, co oznacza, że odpowiednie widoki są włączane w zależności od czujników, które wykryją przeszkodę. Czujniki są podzielone na przednie i tylne.
 
-Poniżej znajdują się przykładowe wizualizacje.
+Poniżej znajdują się przykładowe wizualizacje. 
 
-![Widok czujników przednich](img/przyklad4.png)
-![Widok czujników tylnych](img/przyklad5.png)
-![Widok całościowy](img/przyklad6.png)
+![Widok czujników przednich](img/przod_program.png)
+![Widok czujników tylnych](img/tyl_program.png)
+![Widok całościowy](img/calosc_program.png)
 
 Istnieje jeszcze okno konfiguracji połączenia transmisji UART, włączane automatycznie i jednorazowo przy starcie aplikacji.
 

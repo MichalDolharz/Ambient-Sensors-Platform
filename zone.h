@@ -14,11 +14,6 @@
 #include <QDebug>
 #include <QRadialGradient>
 
-#define BLOCK_WIDTH 70          //!< Simple block width.
-#define BLOCK_WIDTH_SPACE 10    //!< Horizontal space between blocks.
-#define BLOCK_HEIGHT 40         //!< Simple block height.
-#define BLOCK_HEIGHT_SPACE 5    //!< Vertical space between blocks.
-
 
 /*!
  * \brief The Zone class. Defines zone (column/pole of blocks).

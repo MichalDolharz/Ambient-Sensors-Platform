@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['polynomial_5f9_174',['POLYNOMIAL_9',['../platform__software_8ino.html#ae7295ab9ac7d1cd2196d4e4a62c84e77',1,'POLYNOMIAL_9():&#160;platform_software.ino'],['../_o_s_o_s___c_r_c8_8h.html#ae7295ab9ac7d1cd2196d4e4a62c84e77',1,'POLYNOMIAL_9():&#160;OSOS_CRC8.h']]]
+  ['range_5fzone_5f1_167',['RANGE_ZONE_1',['../platform__software_8ino.html#a1493fbf1e7b3b05544c1091d9748ba79',1,'platform_software.ino']]],
+  ['range_5fzone_5f2_168',['RANGE_ZONE_2',['../platform__software_8ino.html#adbdceb6c8db33971cacb59585ff42e15',1,'platform_software.ino']]],
+  ['range_5fzone_5f3_169',['RANGE_ZONE_3',['../platform__software_8ino.html#a908b39fc00361ab5de2ca5ed84eb4742',1,'platform_software.ino']]],
+  ['range_5fzone_5f4_170',['RANGE_ZONE_4',['../platform__software_8ino.html#aa0f4d1347c2a057561460b1fc2fc4124',1,'platform_software.ino']]]
 ];

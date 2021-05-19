@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sensors_179',['SENSORS',['../platform__software_8ino.html#a11d038bc0d376b5a6a7634604b6e058d',1,'platform_software.ino']]],
-  ['status_5fdelay_5ftime_180',['STATUS_DELAY_TIME',['../platform__software_8ino.html#aef8a9131cb6342ce7c6953db1b51b110',1,'platform_software.ino']]],
-  ['status_5fstart_181',['STATUS_START',['../platform__software_8ino.html#a39d685b920dc71fc749819e15399981b',1,'platform_software.ino']]]
+  ['window_5fheight_174',['WINDOW_HEIGHT',['../block_8h.html#a5473cf64fa979b48335079c99532e243',1,'block.h']]],
+  ['window_5fwidth_175',['WINDOW_WIDTH',['../block_8h.html#a498d9f026138406895e9a34b504ac6a6',1,'block.h']]]
 ];

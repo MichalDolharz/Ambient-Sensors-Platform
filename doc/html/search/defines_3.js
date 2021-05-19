@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['range_5fzone_5f1_175',['RANGE_ZONE_1',['../platform__software_8ino.html#a1493fbf1e7b3b05544c1091d9748ba79',1,'platform_software.ino']]],
-  ['range_5fzone_5f2_176',['RANGE_ZONE_2',['../platform__software_8ino.html#adbdceb6c8db33971cacb59585ff42e15',1,'platform_software.ino']]],
-  ['range_5fzone_5f3_177',['RANGE_ZONE_3',['../platform__software_8ino.html#a908b39fc00361ab5de2ca5ed84eb4742',1,'platform_software.ino']]],
-  ['range_5fzone_5f4_178',['RANGE_ZONE_4',['../platform__software_8ino.html#aa0f4d1347c2a057561460b1fc2fc4124',1,'platform_software.ino']]]
+  ['sensors_171',['SENSORS',['../platform__software_8ino.html#a11d038bc0d376b5a6a7634604b6e058d',1,'platform_software.ino']]],
+  ['status_5fdelay_5ftime_172',['STATUS_DELAY_TIME',['../platform__software_8ino.html#aef8a9131cb6342ce7c6953db1b51b110',1,'platform_software.ino']]],
+  ['status_5fstart_173',['STATUS_START',['../platform__software_8ino.html#a39d685b920dc71fc749819e15399981b',1,'platform_software.ino']]]
 ];

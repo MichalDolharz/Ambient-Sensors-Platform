@@ -8,5 +8,8 @@ var files_dup =
     ] ],
     [ "OSOS_CRC8.h", "_o_s_o_s___c_r_c8_8h.html", "_o_s_o_s___c_r_c8_8h" ],
     [ "view.h", "view_8h.html", "view_8h" ],
-    [ "zone.h", "zone_8h.html", "zone_8h" ]
+    [ "zone.h", "zone_8h.html", [
+      [ "Zone", "class_zone.html", "class_zone" ],
+      [ "Colors", "struct_zone_1_1_colors.html", null ]
+    ] ]
 ];

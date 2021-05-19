@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['viewmodes_168',['viewModes',['../view_8h.html#a624422c9b8b024d72eb653db4700ddb1',1,'view.h']]]
+  ['viewmodes_164',['viewModes',['../view_8h.html#a624422c9b8b024d72eb653db4700ddb1',1,'view.h']]]
 ];

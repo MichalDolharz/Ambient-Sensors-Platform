@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['on_5fpushbuttonclose_5fclicked_46',['on_pushButtonClose_clicked',['../class_main_window.html#ae6349a57bd8b7680cfb2da5a6042c4bd',1,'MainWindow']]],
-  ['on_5fpushbuttonconnect_5fclicked_47',['on_pushButtonConnect_clicked',['../class_main_window.html#a74bf7ec51582db3d2d98265b66afc0cc',1,'MainWindow']]],
-  ['on_5fpushbuttonsearch_5fclicked_48',['on_pushButtonSearch_clicked',['../class_main_window.html#a5dd6fd2201adc933d4fe8d053865710f',1,'MainWindow']]],
-  ['orange_49',['Orange',['../struct_zone_1_1_colors.html#a544c95b7165d01f9fc796c30cc42abf0',1,'Zone::Colors']]],
-  ['osos_5fcrc8_2eh_50',['OSOS_CRC8.h',['../_o_s_o_s___c_r_c8_8h.html',1,'']]]
+  ['new_5fstatus_57',['new_status',['../platform__software_8ino.html#a63cbb8ce6fb02da57a3ff097e1ee88ea',1,'platform_software.ino']]],
+  ['nibbletohex_58',['nibbleToHex',['../platform__software_8ino.html#a81d9b65f7c65d3d33ae9d53049fef6fa',1,'platform_software.ino']]],
+  ['noneviewmode_59',['noneViewMode',['../view_8h.html#a624422c9b8b024d72eb653db4700ddb1a38155fcbf075aff7cdf0eeeb97a83ed4',1,'view.h']]]
 ];

@@ -1,3 +1,6 @@
+#ifndef VIEW_H
+#define VIEW_H
+
 /**
 * @file view.h
 * @brief Header for zone composed of blocks and car graphic
@@ -5,8 +8,6 @@
 * @author Michał Dołharz
 *
 */
-#ifndef VIEW_H
-#define VIEW_H
 
 #include "zone.h"
 #include <QPixmap>
@@ -49,10 +50,10 @@ public:
 private:
     QGraphicsScene* sceneHandle; //!< Scene handle. Points to the original scene to add items.
 
-    Zone frontView[5][5];                 //!< 2D array of View objects.
-    Zone backView[5][5];                //!< 2D array of View objects.
-    Zone bothSidesFrontView[5][5];                 //!< 2D array of View objects.
-    Zone bothSidesBackView[5][5];//!< 2D array of View objects.
+    Zone frontView[5][5];                 //!< 2D array of Zone objects.
+    Zone backView[5][5];                //!< 2D array of Zone objects.
+    Zone bothSidesFrontView[5][5];                 //!< 2D array of Zone objects.
+    Zone bothSidesBackView[5][5];//!< 2D array of Zone objects.
 
     int thisViewMode;                //!< Current view mode.
     QGraphicsPixmapItem* frontViewImg; //!< Image of car's front

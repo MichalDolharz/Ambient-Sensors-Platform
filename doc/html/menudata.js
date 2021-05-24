@@ -24,6 +24,8 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
@@ -47,7 +49,8 @@ var menudata={children:[
 {text:"u",url:"functions.html#index_u"},
 {text:"v",url:"functions.html#index_v"},
 {text:"y",url:"functions.html#index_y"},
-{text:"z",url:"functions.html#index_z"}]},
+{text:"z",url:"functions.html#index_z"},
+{text:"~",url:"functions.html#index__7E"}]},
 {text:"Functions",url:"functions_func.html"},
 {text:"Variables",url:"functions_vars.html"}]}]},
 {text:"Files",url:"files.html",children:[
@@ -57,6 +60,8 @@ var menudata={children:[
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
+{text:"e",url:"globals.html#index_e"},
+{text:"f",url:"globals.html#index_f"},
 {text:"g",url:"globals.html#index_g"},
 {text:"h",url:"globals.html#index_h"},
 {text:"l",url:"globals.html#index_l"},
@@ -72,4 +77,5 @@ var menudata={children:[
 {text:"Variables",url:"globals_vars.html"},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
+{text:"Enumerator",url:"globals_eval.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}

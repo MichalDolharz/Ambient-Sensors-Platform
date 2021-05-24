@@ -59,12 +59,12 @@ Zone::Zone(QGraphicsScene* scene, int x, int y, int zoneNumber, int zonePosition
 
         zone->addToGroup(block); // adds to group
     }
-    moveToDestination(zone, zonePosition, viewMode); // moves the group to the right position
+    this->moveToDestination(zonePosition, viewMode); // moves the group to the right position
 
     scene->addItem(zone); // adds zone to the scene
 }
 
-void Zone::moveToDestination(QGraphicsItemGroup *zone, int zonePosition, int viewMode)
+void Zone::moveToDestination(int zonePosition, int viewMode)
 {
     int move;
     int start;

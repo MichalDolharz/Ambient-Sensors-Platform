@@ -1,3 +1,6 @@
+#ifndef BLOCK_H
+#define BLOCK_H
+
 /**
 * @file block.h
 * @brief Header for simple block
@@ -5,9 +8,6 @@
 * @author Michał Dołharz
 *
 */
-
-#ifndef BLOCK_H
-#define BLOCK_H
 
 #include <QPainter>
 #include <QGraphicsPathItem>

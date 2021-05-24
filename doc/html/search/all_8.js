@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loop_36',['loop',['../platform__software_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'platform_software.ino']]]
+  ['ishidden_47',['isHidden',['../class_zone.html#a14816a2c7e95c4a85d06d681e1649814',1,'Zone']]]
 ];

@@ -30,54 +30,50 @@ QT_END_NAMESPACE
  */
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT //<! Główny obiekt klasy
+    Q_OBJECT //<! Main class object.
 
 public:
-    /*! \brief Konstruktor klasy MainWindow
+    /*! \brief MainWindow class constructor
      */
     MainWindow(QWidget *parent = nullptr);
     /*!
-     * \brief MainWindow constructor with View object handle.
+     * \brief MainWindow class constructor with View object handle.
      */
     MainWindow(View &view, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    /*! \brief Odczytuje dane przychodzące z mikrokontrolera poprzez komunikację UART.
+    /*! \brief Reads data from UART communication from sensors platform.
      */
     void readFromPort();
 
-    // Currently not used, but might be used in the future
-    //void demandRepeat();
-
-    /*! \brief Slot przycisku "Szukaj".
-     *  Wyszukuje dostępne porty COM.
+    /*! \brief Slot of "Search" button.
+     *  Searches for available COM ports.
      */
     void on_pushButtonSearch_clicked();
 
-    /*! \brief Slot przycisku "Połącz".
-     *  Łączy z portem wyświetlanym w zakładce obok.
+    /*! \brief Slot of "Connect" button.
+     *  Connects with the port being displayed in the comboBox nearby.
      */
     void on_pushButtonConnect_clicked();
 
-    /*! \brief Slot przycisku "Rozłącz".
-     *  Kończy połączenie z portem.
+    /*! \brief Slot of "Disconnect" button.
+     *  Closes connection with COM port.
      */
     void on_pushButtonClose_clicked();
 
 private:
-    Ui::MainWindow *ui; /**< \brief Główne okno programu. */
-    QSerialPort *device; /**< \brief Urządzenie, z którym aplikacja komunikuje się poprzez UART. */
+    Ui::MainWindow *ui; //!< Application main window.
+    QSerialPort *device; //!< The device with which the communication is set.
+    View *view; //!< Handle to a View object.
 
-    /** @brief Funkcja wysyła wiadomość do okna z logami.
-     *  @param[in] message Wiadomość do wysłania.
+    /** @brief Sends info to logs.
+     *  @param[in] message Message to be sent.
     */
     void addToLogs(QString message);
-    /** @brief Funkcja wysyła wiadomość do okna z wiadomościami komunikacji.
-     *  @param[in] message Wiadomość do wysłania.
+    /** @brief Sends info to communications.
+     *  @param[in] message Message to be sent.
     */
     void addToComm(QString message);
-
-    View *view; //!< Handle to a View object.
 };
 #endif // MAINWINDOW_H

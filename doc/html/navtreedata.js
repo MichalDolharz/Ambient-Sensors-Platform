@@ -30,6 +30,9 @@ var NAVTREE =
     [ "Projekt interfejsu", "index.html#autotoc_md2", null ],
     [ "Protokół komunikacyjny OSOS", "index.html#autotoc_md3", null ],
     [ "Schemat ideowy układu czujników", "index.html#autotoc_md4", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -48,6 +51,7 @@ var NAVTREE =
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -56,7 +60,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_o_s_o_s___c_r_c8_8h.html"
+"_o_s_o_s___c_r_c8_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

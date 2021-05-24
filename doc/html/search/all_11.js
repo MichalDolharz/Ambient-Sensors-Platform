@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['view_76',['View',['../class_view.html',1,'View'],['../class_view.html#ab705303ff60a803b7706a154f095877b',1,'View::View()']]],
-  ['view_77',['view',['../class_main_window.html#a2e0f5dbbb1c15feda21a27675e080a2e',1,'MainWindow']]],
-  ['view_2eh_78',['view.h',['../view_8h.html',1,'']]],
-  ['viewmodes_79',['viewModes',['../view_8h.html#a624422c9b8b024d72eb653db4700ddb1',1,'view.h']]]
+  ['ui_90',['Ui',['../namespace_ui.html',1,'']]],
+  ['ui_91',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]],
+  ['updatescreen_92',['updateScreen',['../class_view.html#a513aa9b7d669f79b9090c755f76fa4ea',1,'View']]],
+  ['updateview_93',['updateView',['../class_view.html#a73932cc2851c1127811c947d864ff08c',1,'View']]]
 ];

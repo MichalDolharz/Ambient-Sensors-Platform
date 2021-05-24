@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ishidden_35',['isHidden',['../class_zone.html#a14816a2c7e95c4a85d06d681e1649814',1,'Zone']]]
+  ['hc_45',['hc',['../platform__software_8ino.html#a10cb79a12a95463e1bf6a946f59c0d49',1,'platform_software.ino']]],
+  ['hide_46',['hide',['../class_zone.html#ad58d1dcbc416fb7e3b06751bc36397be',1,'Zone']]]
 ];

@@ -15,6 +15,15 @@
 #include <QRadialGradient>
 
 
+#define FIRST_BLOCK_START_EDGE 236
+#define FIRST_BLOCK_END_EDGE 277
+#define FIRST_BLOCK_START_EDGE_BOTH 136
+#define FIRST_BLOCK_END_EDGE_BOTH 159
+#define EDGE_TO_EDGE 45
+#define EDGE_TO_EDGE_BOTH 27
+#define SIDE_TO_SIDE 2
+
+
 /*!
  * \brief The Zone class. Defines zone (column/pole of blocks).
  */
@@ -106,11 +115,10 @@ private:
 
     /*!
      * \brief Moves zone (simple group/columns of blocks) to a corresponding position based on zone position number.
-     * \param[out] zone Zone to be moved.
      * \param[in] zonePosition Position to which a zone will be moved.
      * \param[in] viewMode View, which zone being created will be part of.
      */
-    void moveToDestination(QGraphicsItemGroup *zone, int zonePosition, int viewMode);
+    void moveToDestination(int zonePosition, int viewMode);
 
     /*!
      * \brief Holds defined colors.

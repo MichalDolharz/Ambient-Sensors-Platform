@@ -22,10 +22,10 @@
 
 
 /*!
- * \brief qMain Funkcja main() programu.
- * \param argc Liczba parametrów wejściowych.
- * \param argv Parametry wejściowe.
- * \return Działanie programu.
+ * \brief Main Main application function.
+ * \param argc Amount of inputs parameters.
+ * \param argv Array of parameters.
+ * \return Program works.
  */
 int main(int argc, char *argv[])
 {
@@ -45,9 +45,9 @@ int main(int argc, char *argv[])
 
     sensorView.setScene(scene); // sets the scene
 
-    View front(scene); // defines front view (so all the blocks and view in general)
+    View mainView(scene); // defines front view (so all the blocks and view in general)
 
-    MainWindow w(front); // must be defined after View (cause it's its parameter)
+    MainWindow w(mainView); // must be defined after View (cause it's its parameter)
 
     w.setWindowTitle("Configuration"); // sets title to configuration window
     sensorView.setWindowTitle("Sensors"); // sets title to sensors view

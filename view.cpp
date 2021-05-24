@@ -87,8 +87,8 @@ View::View(QGraphicsScene* scene)
 
 void View::updateScreen(int sensor, int status)
 {
-    bool back = 0;
-    bool front = 0;
+    bool back = false;
+    bool front = false;
 
     int tmp = statuses[sensor]; // backup variable
     statuses[sensor] = status; // for calculations
@@ -99,20 +99,20 @@ void View::updateScreen(int sensor, int status)
 
     // set flags
     if(checkStatuses(frontViewMode))
-        front = 1;
+        front = true;
     if(checkStatuses(backViewMode))
-        back = 1;
+        back = true;
 
     statuses[sensor] = tmp; // restore
 
     // some logic
-    if(front == 1 && back == 1)
+    if(front == true && back == true)
         viewTo = bothSidesViewMode;
-    else if(front == 1 && back == 0)
+    else if(front == true && back == false)
         viewTo = frontViewMode;
-    else if(front == 0 && back == 1)
+    else if(front == false && back == true)
         viewTo = backViewMode;
-    else if (front == 0 && back == 0)
+    else if (front == false && back == false)
         viewTo = noneViewMode;
 
 
@@ -214,7 +214,6 @@ void View::updateView(int viewFrom, int viewTo, int sensor, int status)
             break;
         case noneViewMode:
             return;
-            break;
         }
 
         // Show car image. In the noneViewMode there is no image to be shown.
@@ -228,7 +227,7 @@ void View::updateView(int viewFrom, int viewTo, int sensor, int status)
                 (*zone)[i][statuses[i+sensorScale]].show(); // zones are set as the statuses are set
 
         }
-        // Show ne view. Only the both sides view.
+        // Show new view. Only the both sides view.
         else if(viewTo == bothSidesViewMode)
         {
             zone = &bothSidesFrontView;
@@ -252,12 +251,12 @@ bool View::checkStatuses(int viewMode)
     else if(viewMode == backViewMode)
         startingSensor = 5;
     else
-        return 1;
+        return true;
 
     for(int i = startingSensor; i < startingSensor+5; i++)
     {
         if(statuses[i] != 0)
-            return 1;
+            return true;
     }
-    return 0;
+    return false;
 }

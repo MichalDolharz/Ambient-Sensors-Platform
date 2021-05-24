@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['frontview_27',['frontView',['../class_view.html#ad655a676854df57c32dd50b991c0a190',1,'View']]],
-  ['frontviewimg_28',['frontViewImg',['../class_view.html#ac59bc8a785d862763c015b246c0c3b4c',1,'View']]]
+  ['edge_5fto_5fedge_32',['EDGE_TO_EDGE',['../zone_8cpp.html#a06fbc29c8a529e0deb8461718a93bcc7',1,'EDGE_TO_EDGE():&#160;zone.cpp'],['../zone_8h.html#a06fbc29c8a529e0deb8461718a93bcc7',1,'EDGE_TO_EDGE():&#160;zone.h']]],
+  ['edge_5fto_5fedge_5fboth_33',['EDGE_TO_EDGE_BOTH',['../zone_8cpp.html#a27402c127c5e2c5971a7754a7fd4f158',1,'EDGE_TO_EDGE_BOTH():&#160;zone.cpp'],['../zone_8h.html#a27402c127c5e2c5971a7754a7fd4f158',1,'EDGE_TO_EDGE_BOTH():&#160;zone.h']]]
 ];

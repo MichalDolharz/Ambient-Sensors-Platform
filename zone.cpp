@@ -1,14 +1,6 @@
 #include "zone.h"
 #include "view.h"
 
-#define FIRST_BLOCK_START_EDGE 236
-#define FIRST_BLOCK_END_EDGE 277
-#define FIRST_BLOCK_START_EDGE_BOTH 136
-#define FIRST_BLOCK_END_EDGE_BOTH 159
-#define EDGE_TO_EDGE 45
-#define EDGE_TO_EDGE_BOTH 27
-#define SIDE_TO_SIDE 2
-
 Zone::Zone()
 {
     this->zone = new QGraphicsItemGroup();

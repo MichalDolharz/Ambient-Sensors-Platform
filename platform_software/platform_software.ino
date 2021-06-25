@@ -2,6 +2,16 @@
 
 #include <HCSR04.h>
 
+#define S0 18
+#define S1 17
+#define S2 16
+#define S3 15
+#define S4 14
+#define S5 10
+#define S6 9
+#define S7 8
+#define S8 7
+#define S9 6
 
 #define POLYNOMIAL_9 0x161 //!< Polynomial for CRC8.
 
@@ -20,7 +30,7 @@
  */
 typedef unsigned char byte;
 
-HCSR04 hc(2,new int[SENSORS]{3,4,5,6,7, 8, 9, 10, 11, 12},SENSORS); //!< Object of HCSR04 class, representing five sensors. Parameters: (trig pin , echo pins, number of sensors).
+HCSR04 hc(2,new int[SENSORS]{S0, S1, S2, S3, S4, S5, S6, S7, S8, S9},SENSORS); //!< Object of HCSR04 class, representing ten sensors. Parameters: (trig pin , echo pins, number of sensors).
 
 int new_status; //!< Variable with new status to be verified and set in case of positive verification..
 int current_status[] = {STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START, STATUS_START,STATUS_START,STATUS_START,STATUS_START,STATUS_START}; //!< //!< Variable that holds the current status.
@@ -39,7 +49,6 @@ unsigned long timeStopToSendDataFrame; //!< Saves time so Serial has time to fin
 void setup()
 {
     Serial.begin(9600);
-    pinMode(15, OUTPUT);
 }
 
 /*! @brief Main function (loop). Each cycle refers to one sensor.
@@ -59,14 +68,14 @@ void loop()
     if(new_status != current_status[sensor]) // if 'new' status is indeed different
     {
 
-      // These worked for one sensor not bad, but for more sensor it slows down program too much. 
+      // These worked not bad for one sensor, but for more sensor it slows down program too much. 
       // new_status = checkChange(hc, current_status, new_status);
       //if(new_status != current_status[sensor]){
 
         current_status[sensor] = new_status;
         msg = CreateDataFrame(sensor, current_status[sensor]);
         Serial.println(msg);
-        /*for(int s = 0; s < 10; s++)
+        /*(int s = 0; s < 10; s++)
         {
           Serial.print(current_status[s]);
           Serial.print(" ");
@@ -130,7 +139,7 @@ void loop()
   {
     sensor = 0;
   }
-  delay(20); // I think it really was a good idea
+  delay(20); 
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,5 +1,11 @@
 # Platforma czujników – WDS # {#mainpage}
 
+## Stan projektu
+
+Ukończony. 
+
+Więcej informacji w ![sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
+
 ## Opis projektu
 
 Celem projektu jest stworzenie aplikacji ostrzegającej o przeszkodach w otoczeniu robota mobilnego w oparciu o biblioteki Qt języka C++, czujniki ultradźwiękowe HC-SR04 oraz mikrokontroler Arduino Nano. Wizualizacja ma przypominać wizualizację danych z czujników samochodu, wyświetlaną na wewnętrznym, wbudowanym ekranie.
@@ -38,8 +44,18 @@ Platforma czujników komunikuje się z aplikacją za pomocą UART. Gdy dane poch
 
 Komunikacja jest znakowa. Ramka rozpoczyna się od znaku X. Następnie, po spacji, znajduje się numer sensora, którego komunikat dotyczy (Sn). Po kolejnej spacji następuje numer statusu (St). Na koniec, również po spacji, znajduje się suma kontrolna CRC8 w zapisie heksadecymalnym, zajmująca dwa znaki w ramce. 
 
-## Schemat ideowy układu czujników
+## Elektronika
 
-Utworzony schemat jest jedynie wersją wstępną. Zostanie dopracowany w dalszych etapach projektu.
+Poniżej zamieszczono schemat ideowy układu czujników oraz zdjęcie wytrawionej płytki PCB. Projekt płytki oraz więcej zdjęć znajduje się w ![sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
 
 ![Wstępna wersja schematu ideowego](img/schemat.png)
+
+## Prototyp platformy czujników
+
+![Prototyp platformy](img/prototyp.jpg)
+
+## Dalsze plany
+
+Platforma czujników zostanie wykorzystana do stworzenia nowego robota mobilnego. robot będzie miał kształt okręgu, a czujniki zostaną rozłożone w równych odległościach, dzięki czemu robot będzie miał podgląd na teren dookoła niego. 
+
+

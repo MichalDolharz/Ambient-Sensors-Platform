@@ -4,7 +4,7 @@
 
 Ukończony. 
 
-Więcej informacji w ![sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
+Więcej informacji w [sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
 
 ## Opis projektu
 
@@ -46,7 +46,7 @@ Komunikacja jest znakowa. Ramka rozpoczyna się od znaku X. Następnie, po spacj
 
 ## Elektronika
 
-Poniżej zamieszczono schemat ideowy układu czujników oraz zdjęcie wytrawionej płytki PCB. Projekt płytki oraz więcej zdjęć znajduje się w ![sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
+Poniżej zamieszczono schemat ideowy układu czujników oraz zdjęcie wytrawionej płytki PCB. Projekt płytki oraz więcej zdjęć znajduje się w [sprawozdaniu](https://github.com/Repti993/Ambient-Sensors-Platform/blob/main/reports/WDS_stage_7_finished_v2.pdf).
 
 ![Wstępna wersja schematu ideowego](img/schemat.png)
 
